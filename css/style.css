@@ -1,0 +1,203 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap");
+.button {
+  padding: .6rem 2.5rem !important;
+  background-color: #5C9C52;
+  color: white;
+  border-radius: 40px;
+  border: 2px solid #5C9C52;
+}
+
+.button.btn-white {
+  background-color: white;
+  color: #5C9C52;
+  border: 2px solid white;
+}
+
+.button.btn-hollow {
+  background-color: transparent;
+  color: white;
+  border: 2px solid white;
+}
+
+.button.btn-hollow-secondary {
+  background-color: transparent;
+  color: #F96900;
+  border: 2px solid #F96900;
+}
+
+.title {
+  margin-bottom: 4rem;
+  text-align: center;
+}
+
+.navbar {
+  background-color: #7EC173;
+  color: white;
+}
+
+.navbar .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.navbar .container .navbar-brand {
+  padding: 1rem 0;
+}
+
+.navbar .container .menu-lists ul {
+  margin: 0;
+  padding: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-weight: 700;
+}
+
+.navbar .container .menu-lists ul li {
+  padding: 1rem;
+}
+
+.navbar .container .menu-lists ul .button {
+  margin-left: 1rem;
+}
+
+.hero {
+  background: #7EC173;
+  margin-top: -2px;
+}
+
+.hero .container {
+  color: white;
+  padding: 3rem 0 6rem;
+}
+
+.hero .container .hero-text h1 {
+  font-size: 68px;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.hero .container .hero-text h6 {
+  margin-bottom: 1.5rem;
+}
+
+.hero .container .hero-text .button {
+  font-weight: 700;
+  padding: 1rem 1.5rem !important;
+  font-size: 20px;
+}
+
+.invest {
+  padding: 6rem 0;
+}
+
+.invest .container {
+  padding: 0 2rem;
+}
+
+.invest .container .items .item {
+  padding: 1.5rem 1.5rem;
+}
+
+.invest .container .items .item .img {
+  margin-bottom: 40px;
+}
+
+.invest .container .items .item h4 {
+  margin-bottom: 1rem;
+  font-weight: 500;
+}
+
+.invest .container .items .item h6 {
+  font-weight: 400;
+  color: #9E9EA9;
+}
+
+.projects {
+  padding: 6rem 0;
+}
+
+.projects .project {
+  -webkit-box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.16);
+          box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.16);
+  border-radius: 16px;
+  padding-top: 0;
+  margin-bottom: 2rem;
+}
+
+.projects .project .project-image {
+  margin-bottom: .5rem;
+}
+
+.projects .project .project-image img {
+  border-radius: 1rem 1rem 0 0;
+}
+
+.projects .project .project-header, .projects .project .project-body, .projects .project .project-footer {
+  padding: .5rem 1rem;
+}
+
+.projects .project .project-header p, .projects .project .project-header h5, .projects .project .project-body p, .projects .project .project-body h5, .projects .project .project-footer p, .projects .project .project-footer h5 {
+  margin-bottom: .5rem;
+}
+
+.projects .project .project-header .progress, .projects .project .project-body .progress, .projects .project .project-footer .progress {
+  margin-bottom: 1rem;
+  color: white;
+  position: relative;
+}
+
+.projects .project .project-header .progress .text, .projects .project .project-body .progress .text, .projects .project .project-footer .progress .text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.projects .project .project-header .progress .progress-bar, .projects .project .project-body .progress .progress-bar, .projects .project .project-footer .progress .progress-bar {
+  background-color: #5C9C52;
+}
+
+.projects .project-link {
+  margin-top: 2rem;
+  text-align: center;
+}
+
+.projects .project-link .button {
+  padding: 1rem 3rem !important;
+  font-size: 20px;
+}
+
+html, body {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+p {
+  margin: 0;
+}
+
+ul {
+  list-style-type: none;
+}
+
+h6 {
+  font-size: 18px;
+}
+/*# sourceMappingURL=style.css.map */
