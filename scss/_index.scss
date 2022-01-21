@@ -2,6 +2,10 @@
 .title {
     margin-bottom: 4rem;
     text-align: center;
+
+    h3 {
+        font-size: 34px;
+    }
 }
 
 .navbar {
@@ -66,7 +70,7 @@
 }
 
 .invest {
-    padding: 6rem 0;
+    padding: 5rem 0;
 
     .container {
         padding: 0 2rem;
@@ -93,7 +97,7 @@
 }
 
 .projects {
-    padding: 6rem 0;
+    padding: 5rem 0;
 
     .project {
         box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.16);
@@ -141,6 +145,145 @@
         .button {
             padding: 1rem 3rem !important;
             font-size: 20px;
+        }
+    }
+}
+
+.method {
+    padding: 5rem 0;
+
+    .title {
+        margin-bottom: 2rem;
+    }
+    .nav-tabs {
+        border-bottom: none;
+        justify-content: center;
+
+        .nav-link {
+            border: 2px solid $primary;
+            color: $primary;
+            transition: all .2s ease;
+            padding: .75rem 2rem;
+            font-size: 20px;
+            
+            &:first-child {
+                border-radius: 2rem 0 0 2rem;
+                border-right: 1px solid $primary;
+            }
+
+            &:last-child {
+                border-radius: 0 2rem 2rem 0;
+                border-left: 1px solid $primary;
+            }
+
+            &.active {
+                background-color: $primary;
+                color: white;
+                transition: all .2s ease;
+            }
+        }
+    }
+
+    .tab-pane {
+        padding: 2rem 0;
+
+        .method-image {
+            img {
+                border-radius: .5rem;
+            }
+        }
+
+        .number {
+            padding: .5rem;
+            border-radius: 50%;
+            background-color: $primary;
+            color: white;
+            width: 40px;
+            height: 40px;
+            text-align: center;
+            font-weight: 700;
+            margin-right: 1rem;
+        }
+
+        .step {
+            color: $primary;
+            font-size: 20px;
+            font-weight: 500;
+        }
+
+        .step-desc {
+            padding-left: 36px;
+            margin-left: 20px;
+            padding-top: .5rem;
+            padding-bottom: 1rem;
+            border-left: 2px solid #C9C9CF;
+
+            &:last-child {
+                border-left: none;
+            }
+        }
+    }
+}
+
+.team {
+    padding: 5rem 0;
+
+    .item {
+        text-align: center;
+        padding: 0 .5rem;
+
+        img {
+            width: 100%;
+        }
+        
+        .team-name {
+            color: $secondary;
+            font-size: 24px;
+            font-weight: 500;
+            margin-bottom: .5rem;
+        }
+
+        p {
+            font-size: 20px;
+        }
+    }
+}
+
+.cta {
+    position: relative;
+    color: white;
+
+    .background {
+        position: absolute;
+        width: 100%;
+        height: 75%;
+        top: 25%;
+        background-color: $primary;
+        z-index: -1;
+    }
+
+    .col-md-3 {
+        width: 27%;
+    }
+
+    .col-md-9 {
+        width: 73%;
+    }
+
+    .cta-text {
+        margin-top: 10%;
+        padding-left: 4rem;
+
+        h4 {
+            margin-bottom: 2rem;
+            font-weight: 700;
+            font-size: 2rem;
+        }
+
+        h5 {
+            margin-bottom: 2rem;
+            font-size: 20px;
+            font-weight: 500;
         }
     }
 }
