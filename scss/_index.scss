@@ -1,10 +1,21 @@
+@mixin initialPadding {
+    padding: 5rem 0;
+
+    @include breakpoint(untilTablet) {
+        padding: 2rem 0;
+    }
+}
 
 .title {
     margin-bottom: 4rem;
     text-align: center;
 
-    h3 {
-        font-size: 34px;
+    @include breakpoint(mobileonly) {
+        margin-bottom: 2rem;
+        h2 {
+            font-size: 22px;
+            font-weight: 700;
+        }
     }
 }
 
@@ -38,6 +49,70 @@
                 }
             }
         }
+
+        .hamburger {
+            display: none;
+        }
+
+        .offcanvas {
+            width: 330px;
+            color: $primary;
+            padding: 0 1rem;
+            padding-top: 2rem;
+
+            .btn-close {
+                color: white !important;
+            }
+
+            ul {
+                padding: 2rem 0;
+                font-weight: 700;
+                font-size: 18px;
+                margin-top: 2rem;
+
+                li {
+                    padding-bottom: 1.5rem;
+                }
+
+                .button {
+                    margin-bottom: 1.5rem;
+                }
+
+                .btn-hollow {
+                    color: $primary;
+                    border: 2px solid $primary;
+                }
+
+                .btn-white {
+                    color: white;
+                    background-color: $primary;
+                    border-color: $primary;
+                }
+            }
+        }
+    }
+
+    
+
+    @include breakpoint(untilTablet) {
+        background-color: white;
+
+        .container {
+            .menu-lists {
+                display: none;
+            }
+    
+            .navbar-brand {
+                padding: .5rem 0;
+                img {
+                    max-width: 150px;
+                }
+            }
+    
+            .hamburger {
+                display: block;
+            }
+        }
     }
 }
 
@@ -66,11 +141,45 @@
                 font-size: 20px;
             }
         }
+
+        @include breakpoint(untilTablet) {
+            padding: 2rem 1rem !important;
+
+            .hero-text {
+                h1 {
+                    font-size: 38px;
+                }
+
+                h6 {
+                    font-size: 1rem;
+                }
+
+                margin-bottom: 2rem;
+
+                .buttons {
+                    display: block !important;
+
+                    .btn-white, .btn-hollow {
+                        margin-bottom: 1rem;
+                        font-size: 1rem;
+                        padding: .75rem 1.5rem !important;
+                    }
+                }
+            }
+        }
+
+        @include breakpoint(mobileonly) {
+            .hero-text {
+                .btn-hollow {
+                    display: none;
+                }
+            }
+        }
     }
 }
 
 .invest {
-    padding: 5rem 0;
+    @include initialPadding();
 
     .container {
         padding: 0 2rem;
@@ -97,7 +206,7 @@
 }
 
 .projects {
-    padding: 5rem 0;
+    @include initialPadding();
 
     .project {
         box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.16);
@@ -150,7 +259,7 @@
 }
 
 .method {
-    padding: 5rem 0;
+    @include initialPadding();
 
     .title {
         margin-bottom: 2rem;
@@ -181,11 +290,22 @@
                 color: white;
                 transition: all .2s ease;
             }
+
+            @include breakpoint(untilTablet) {
+                font-size: 16px;
+                padding: .5rem 1.5rem;
+            }
         }
     }
 
     .tab-pane {
         padding: 2rem 0;
+
+        @include breakpoint(untilTablet) {
+            .method-desc {
+                margin-top: 1.5rem;
+            }
+        }
 
         .method-image {
             img {
@@ -226,7 +346,7 @@
 }
 
 .team {
-    padding: 5rem 0;
+    @include initialPadding();
 
     .item {
         text-align: center;
@@ -246,6 +366,18 @@
         p {
             font-size: 20px;
         }
+
+        @include breakpoint(untilTablet) {
+            margin-bottom: 2rem;
+
+            .team-name {
+                font-size: 20px;
+            }
+
+            p {
+                font-size: 1rem;
+            }
+        }
     }
 }
 
@@ -262,17 +394,46 @@
         z-index: -1;
     }
 
-    .col-md-3 {
-        width: 27%;
+    @include breakpoint(laptop) {
+        
+        .col-lg-3 {
+            width: 27%;
+        }
+
+        .col-lg-9 {
+            width: 73%;
+        }
+
     }
 
-    .col-md-9 {
-        width: 73%;
-    }
+    @include breakpoint(mobileonly) {
+        .background {
+            height: 100%;
+            top: 0;
+        }
+        
+        .container {
+            padding: 0 1rem !important;
 
+            img {
+                max-width: 220px;
+            }
+
+            .col-lg-3 {
+                text-align: center;
+                margin-top: 1rem;
+            }
+
+            .col-lg-9 {
+                padding-left: .75rem;
+                text-align: center;
+            }
+        }
+    }
     .cta-text {
         margin-top: 10%;
         padding-left: 4rem;
+        padding-bottom: 1rem;
 
         h4 {
             margin-bottom: 2rem;
@@ -284,6 +445,94 @@
             margin-bottom: 2rem;
             font-size: 20px;
             font-weight: 500;
+        }
+    }
+
+    @media (min-width:600px) and (max-width:1200px) {
+        .background {
+            height: 85%;
+            top: 15%;
+        }
+
+        .cta-text {
+            padding-left: 1rem;
+            h4 {
+                margin-bottom: 1rem;
+                font-size: 1.75rem;
+            }
+
+            h5 {
+                font-size: 1rem;
+                margin-bottom: 1rem;
+            }
+       }
+    }
+}
+
+.footer {
+    padding: 3rem 0;
+    background-color: #2C302E;
+    color: white;
+
+    .footer-logo {
+        margin-bottom: 3rem;
+    }
+
+    h5 {
+        font-size: 22px;
+    }
+    .footer-risk {
+        margin-top: 2rem;
+        border-top: 1px solid white;
+        padding-top: 2rem;
+        padding-left: 0;
+        padding-right: 0;
+        margin-left: .75rem;
+        margin-right: .75rem;
+
+        h5 {
+            margin-bottom: 2rem;
+        }
+    }
+
+    .copyright {
+        margin-top: 2rem;
+        border-top: 1px solid white;
+        padding-top: 2rem;
+        padding-left: 0;
+        padding-right: 0;
+        margin-left: .75rem;
+        margin-right: .75rem;
+
+        .links {
+            a {
+                text-decoration: underline;
+            }
+        }
+    }
+
+    @include breakpoint(untilTablet) {
+
+        .footer-item {
+            margin-bottom: 3rem;
+
+            &:last-child {
+                margin-bottom: 1rem;
+            }
+        }
+        .footer-risk, .copyright {
+            margin-left: 0;
+            margin-right: 0;
+            padding-left: .75rem;
+            padding-right: .75rem;
+        }
+
+        .links {
+            margin-bottom: 2rem;
+
+            .d-flex {
+                justify-content: center !important;
+            }
         }
     }
 }

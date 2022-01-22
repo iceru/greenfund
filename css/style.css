@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap");
+/* BREAKPOINTS */
 .button {
   padding: .6rem 2.5rem !important;
   background-color: #5C9C52;
@@ -37,8 +38,14 @@
   text-align: center;
 }
 
-.title h3 {
-  font-size: 34px;
+@media (max-width: 37.5em) {
+  .title {
+    margin-bottom: 2rem;
+  }
+  .title h2 {
+    font-size: 22px;
+    font-weight: 700;
+  }
 }
 
 .navbar {
@@ -82,6 +89,65 @@
   margin-left: 1rem;
 }
 
+.navbar .container .hamburger {
+  display: none;
+}
+
+.navbar .container .offcanvas {
+  width: 330px;
+  color: #5C9C52;
+  padding: 0 1rem;
+  padding-top: 2rem;
+}
+
+.navbar .container .offcanvas .btn-close {
+  color: white !important;
+}
+
+.navbar .container .offcanvas ul {
+  padding: 2rem 0;
+  font-weight: 700;
+  font-size: 18px;
+  margin-top: 2rem;
+}
+
+.navbar .container .offcanvas ul li {
+  padding-bottom: 1.5rem;
+}
+
+.navbar .container .offcanvas ul .button {
+  margin-bottom: 1.5rem;
+}
+
+.navbar .container .offcanvas ul .btn-hollow {
+  color: #5C9C52;
+  border: 2px solid #5C9C52;
+}
+
+.navbar .container .offcanvas ul .btn-white {
+  color: white;
+  background-color: #5C9C52;
+  border-color: #5C9C52;
+}
+
+@media (max-width: 60em) {
+  .navbar {
+    background-color: white;
+  }
+  .navbar .container .menu-lists {
+    display: none;
+  }
+  .navbar .container .navbar-brand {
+    padding: .5rem 0;
+  }
+  .navbar .container .navbar-brand img {
+    max-width: 150px;
+  }
+  .navbar .container .hamburger {
+    display: block;
+  }
+}
+
 .hero {
   background: #7EC173;
   margin-top: -2px;
@@ -108,8 +174,43 @@
   font-size: 20px;
 }
 
+@media (max-width: 60em) {
+  .hero .container {
+    padding: 2rem 1rem !important;
+  }
+  .hero .container .hero-text {
+    margin-bottom: 2rem;
+  }
+  .hero .container .hero-text h1 {
+    font-size: 38px;
+  }
+  .hero .container .hero-text h6 {
+    font-size: 1rem;
+  }
+  .hero .container .hero-text .buttons {
+    display: block !important;
+  }
+  .hero .container .hero-text .buttons .btn-white, .hero .container .hero-text .buttons .btn-hollow {
+    margin-bottom: 1rem;
+    font-size: 1rem;
+    padding: .75rem 1.5rem !important;
+  }
+}
+
+@media (max-width: 37.5em) {
+  .hero .container .hero-text .btn-hollow {
+    display: none;
+  }
+}
+
 .invest {
   padding: 5rem 0;
+}
+
+@media (max-width: 60em) {
+  .invest {
+    padding: 2rem 0;
+  }
 }
 
 .invest .container {
@@ -136,6 +237,12 @@
 
 .projects {
   padding: 5rem 0;
+}
+
+@media (max-width: 60em) {
+  .projects {
+    padding: 2rem 0;
+  }
 }
 
 .projects .project {
@@ -194,6 +301,12 @@
   padding: 5rem 0;
 }
 
+@media (max-width: 60em) {
+  .method {
+    padding: 2rem 0;
+  }
+}
+
 .method .title {
   margin-bottom: 2rem;
 }
@@ -231,8 +344,21 @@
   transition: all .2s ease;
 }
 
+@media (max-width: 60em) {
+  .method .nav-tabs .nav-link {
+    font-size: 16px;
+    padding: .5rem 1.5rem;
+  }
+}
+
 .method .tab-pane {
   padding: 2rem 0;
+}
+
+@media (max-width: 60em) {
+  .method .tab-pane .method-desc {
+    margin-top: 1.5rem;
+  }
 }
 
 .method .tab-pane .method-image img {
@@ -273,6 +399,12 @@
   padding: 5rem 0;
 }
 
+@media (max-width: 60em) {
+  .team {
+    padding: 2rem 0;
+  }
+}
+
 .team .item {
   text-align: center;
   padding: 0 .5rem;
@@ -293,6 +425,18 @@
   font-size: 20px;
 }
 
+@media (max-width: 60em) {
+  .team .item {
+    margin-bottom: 2rem;
+  }
+  .team .item .team-name {
+    font-size: 20px;
+  }
+  .team .item p {
+    font-size: 1rem;
+  }
+}
+
 .cta {
   position: relative;
   color: white;
@@ -307,17 +451,40 @@
   z-index: -1;
 }
 
-.cta .col-md-3 {
-  width: 27%;
+@media (min-width: 64em) {
+  .cta .col-lg-3 {
+    width: 27%;
+  }
+  .cta .col-lg-9 {
+    width: 73%;
+  }
 }
 
-.cta .col-md-9 {
-  width: 73%;
+@media (max-width: 37.5em) {
+  .cta .background {
+    height: 100%;
+    top: 0;
+  }
+  .cta .container {
+    padding: 0 1rem !important;
+  }
+  .cta .container img {
+    max-width: 220px;
+  }
+  .cta .container .col-lg-3 {
+    text-align: center;
+    margin-top: 1rem;
+  }
+  .cta .container .col-lg-9 {
+    padding-left: .75rem;
+    text-align: center;
+  }
 }
 
 .cta .cta-text {
   margin-top: 10%;
   padding-left: 4rem;
+  padding-bottom: 1rem;
 }
 
 .cta .cta-text h4 {
@@ -332,9 +499,98 @@
   font-weight: 500;
 }
 
+@media (min-width: 600px) and (max-width: 1200px) {
+  .cta .background {
+    height: 85%;
+    top: 15%;
+  }
+  .cta .cta-text {
+    padding-left: 1rem;
+  }
+  .cta .cta-text h4 {
+    margin-bottom: 1rem;
+    font-size: 1.75rem;
+  }
+  .cta .cta-text h5 {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+  }
+}
+
+.footer {
+  padding: 3rem 0;
+  background-color: #2C302E;
+  color: white;
+}
+
+.footer .footer-logo {
+  margin-bottom: 3rem;
+}
+
+.footer h5 {
+  font-size: 22px;
+}
+
+.footer .footer-risk {
+  margin-top: 2rem;
+  border-top: 1px solid white;
+  padding-top: 2rem;
+  padding-left: 0;
+  padding-right: 0;
+  margin-left: .75rem;
+  margin-right: .75rem;
+}
+
+.footer .footer-risk h5 {
+  margin-bottom: 2rem;
+}
+
+.footer .copyright {
+  margin-top: 2rem;
+  border-top: 1px solid white;
+  padding-top: 2rem;
+  padding-left: 0;
+  padding-right: 0;
+  margin-left: .75rem;
+  margin-right: .75rem;
+}
+
+.footer .copyright .links a {
+  text-decoration: underline;
+}
+
+@media (max-width: 60em) {
+  .footer .footer-item {
+    margin-bottom: 3rem;
+  }
+  .footer .footer-item:last-child {
+    margin-bottom: 1rem;
+  }
+  .footer .footer-risk, .footer .copyright {
+    margin-left: 0;
+    margin-right: 0;
+    padding-left: .75rem;
+    padding-right: .75rem;
+  }
+  .footer .links {
+    margin-bottom: 2rem;
+  }
+  .footer .links .d-flex {
+    -webkit-box-pack: center !important;
+        -ms-flex-pack: center !important;
+            justify-content: center !important;
+  }
+}
+
 html, body {
   font-family: 'Montserrat', sans-serif;
   font-weight: 400;
+}
+
+@media (max-width: 37.5em) {
+  .container {
+    padding: 1rem !important;
+  }
 }
 
 a {
@@ -352,5 +608,11 @@ ul {
 
 h6 {
   font-size: 18px;
+}
+
+@media (max-width: 60em) {
+  h6 {
+    font-size: 16px;
+  }
 }
 /*# sourceMappingURL=style.css.map */

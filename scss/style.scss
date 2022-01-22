@@ -8,6 +8,12 @@ html, body {
     font-weight: 400;
 }
 
+@include breakpoint(mobileonly) {
+    .container {
+        padding: 1rem !important;
+    }
+}
+
 a {
     text-decoration: none;
     color: inherit;
@@ -23,4 +29,8 @@ ul {
 
 h6 {
     font-size: 18px;
+
+    @include breakpoint(untilTablet) {
+        font-size: 16px;
+    }
 }

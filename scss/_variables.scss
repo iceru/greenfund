@@ -3,6 +3,36 @@ $secondary: #F96900;
 $grey: #9E9EA9;
 $header: #7EC173;
 
+/* BREAKPOINTS */
+@mixin breakpoint($point) {
+    @if $point == desktop {
+      @media (min-width: 70em) {
+        @content;
+      }
+    } @else if $point == laptop {
+      @media (min-width: 64em) {
+        @content;
+      }
+    } @else if $point == tablet {
+      @media (min-width: 50em) {
+        @content;
+      }
+    } @else if $point == phablet {
+      @media (min-width: 37.5em) {
+        @content;
+      }
+    } @else if $point == mobileonly {
+      @media (max-width: 37.5em) {
+        @content;
+      }
+    }
+    @else if $point == untilTablet {
+      @media (max-width: 60em) {
+        @content;
+      }
+    }
+}
+
 .button {
     padding: .6rem 2.5rem !important;
     background-color: $primary;
