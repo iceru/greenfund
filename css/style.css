@@ -134,6 +134,9 @@
   .navbar {
     background-color: white;
   }
+  .navbar .container {
+    padding: 0 1rem !important;
+  }
   .navbar .container .menu-lists {
     display: none;
   }
