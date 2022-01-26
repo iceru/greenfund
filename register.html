@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Greenfund</title>
+
+    <!-- CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="../css/style.css">
+
+    <!-- Javascript -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div data-include="/components/navbar.html"></div>
+
+    <div class="register">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-12 col-md-6 mb-4 mb-lg-0">
+                    <img src="/images/register.png" class="w-100" alt="Register">
+                </div>
+
+                <div class="col-12 col-md-6">
+                    <div class="form">
+                        <div class="header mb-4">
+                            <div class="text-center ">
+                                <h3 class="primary-color fw-bold mb-4">Daftar di Greenfund</h3>
+                            </div>
+                            <div class="d-flex justify-content-center mb-4">
+                                <a class="social" href="#">
+                                    <img src="/images/Google.png" alt="">
+                                </a>
+                                <a class="social" href="#">
+                                    <img src="/images/github.png" alt="">
+                                </a>
+                                <a class="social" href="#">
+                                    <img src="/images/twitter.png" alt="">
+                                </a>
+                            </div>
+                            <div class="with-email">
+                                <p>Atau daftar dengan email</p>
+                            </div>
+                        </div>
+
+                        <form action="" class="form-group">
+                            <div class="mb-4">
+                                <label for="" class="form-label">Nama Lengkap*</label>
+                                <input type="text" class="form-control" name="" id="" aria-describedby="helpId"
+                                    placeholder="Masukkan nama lengkap">
+                            </div>
+                            <div class="mb-4">
+                                <label for="" class="form-label">Alamat Email*</label>
+                                <input type="email" class="form-control" name="email" id="" aria-describedby="helpId"
+                                    placeholder="Masukkan alamat email">
+                            </div>
+                            <div class="mb-4">
+                                <label for="" class="form-label">Buat Password*</label>
+                                <input type="password" class="form-control mb-2" name="password" id=""
+                                    aria-describedby="helpId" placeholder="Masukkan password">
+                                <div class="row">
+                                    <div class="col-6 mb-1">angka</div>
+                                    <div class="col-6 mb-1">min. 8 karakter</div>
+                                    <div class="col-6 mb-1">huruf besar</div>
+                                    <div class="col-6 mb-1">huruf kecil</div>
+                                    <div class="col-6 mb-1">spesial karakter <br>
+                                        (!,@,$, etc)</div>
+                                </div>
+                            </div>
+                            <div class="mb-4">
+                                <label for="" class="form-label">Konfirmasi Password*</label>
+                                <input type="password" class="form-control" name="password" id=""
+                                    aria-describedby="helpId" placeholder="Konfirmasi password">
+                            </div>
+                            <button type="submit" class="button btn-secondary full mb-4">Daftar</button>
+                            <p class="text-center">Sudah punya akun? <b class="secondary-color fw-bold">Log In.</b></p>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+<script>
+    $(document).ready(function () {
+        $("div[data-include]").each(function () {
+            $(this).load($(this).attr("data-include"));
+        });
+    });
+
+</script>
+
+</html>

@@ -33,6 +33,14 @@ $header: #7EC173;
     }
 }
 
+.primary-color {
+  color: $primary;
+}
+
+.secondary-color {
+  color: $secondary;
+}
+
 .button {
     padding: .6rem 2.5rem !important;
     background-color: $primary;
@@ -40,6 +48,10 @@ $header: #7EC173;
     border-radius: 40px;
     border: 2px solid $primary;
     display: inline-block;
+
+    &.full {
+      width: 100%;
+    }
 
     &.btn-white {
         background-color: white;
@@ -65,4 +77,10 @@ $header: #7EC173;
         color: $secondary;
         border: 2px solid $secondary;
     }
+
+    &.btn-hollow-primary {
+      background-color: transparent;
+      color: $primary;
+      border: 2px solid $primary;
+  }
 }

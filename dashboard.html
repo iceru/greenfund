@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Greenfund</title>
+
+    <!-- CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Javascript -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div data-include="/components/navbar.html"></div>
+
+    <div class="dashboard">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-lg-3">
+                    <div class="sidebar">
+                        <div class="sidebar-header">
+                            <div class="image"><img src="/images/sidebar/userImage.png" alt=""></div>
+                            <h5>Eren Yeager</h4>
+                            <p>erenyeager@gmail.com</p>
+                        </div>
+                        <div class="sidebar-menu">
+                            <ul>
+                                <a href="">
+                                    <li>
+                                        <img src="/images/sidebar/dashboard.png" alt="">
+                                        Dashboard
+                                    </li>
+                                </a>
+                                <a href="">
+                                    <li>
+                                        <img src="/images/sidebar/business.png" alt="">
+                                        Pemodal
+                                    </li>
+                                </a>
+                                <a href="">
+                                    <li>
+                                        <img src="/images/sidebar/briefcase.png" alt="">
+                                        Penerbit
+                                    </li>
+                                </a>
+                                <a href="">
+                                    <li>
+                                        <img src="/images/sidebar/transaksi.png" alt="">
+                                        Transaksi
+                                    </li>
+                                </a>
+                                <a href="">
+                                    <li class="account">
+                                        <img src="/images/sidebar/user.png" alt="">
+                                        Akun
+                                    </li>
+                                </a>
+                                <a href="">
+                                    <li>
+                                        <img src="/images/sidebar/headphones.png" alt="">
+                                        Support Center
+                                    </li>
+                                </a>
+                                <a href="">
+                                    <li>
+                                        <img src="/images/sidebar/logout.png" alt="">
+                                        Keluar
+                                    </li>
+                                </a>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+<script>
+    $(document).ready(function () {
+        $("div[data-include]").each(function () {
+            $(this).load($(this).attr("data-include"));
+        });
+    });
+
+</script>
+
+</html>

@@ -1,0 +1,58 @@
+.sidebar {
+    background: $primary;
+    color: white;
+    padding: 3rem 1.5rem;
+    border-radius: 8px 0 0 8px;
+
+    .sidebar-header {
+        text-align: center;
+        margin-bottom: 3rem;
+
+        .image {
+            margin-bottom: .75rem;
+            img {
+                border-radius: 50%;
+                width: 40px;
+                height: 40px;
+            }
+        }
+
+        h5 {
+            margin-bottom: 4px;
+        }
+
+        p {
+            font-weight: 500;
+        }
+    }
+
+    .sidebar-menu {
+        ul {
+            padding: 0;
+            margin: 0;
+
+            li {
+                padding: 1rem;
+                margin-bottom: 1rem;
+                transition: all .2s ease;
+                border-radius: 1.5rem;
+
+                img {
+                    margin-right: 1rem;
+                    width: 24px;
+                    height: auto;
+                }
+
+                &:hover {
+                    background-color: #DEFFD4;
+                    color: #F96900;
+                    transition: all .2s ease;
+                }
+            }
+
+            .account {
+                margin-bottom: 4rem;
+            }
+        }
+    }
+}

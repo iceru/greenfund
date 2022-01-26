@@ -1,0 +1,103 @@
+.form-group {
+    .form-control, .form-select {
+        padding: 1rem;
+        font-size: 14px;
+        border-radius: 6px;
+    }
+
+    .form-label {
+        font-weight: 500;
+    }
+    .form-title {
+        padding: .5rem 1rem;
+        background: #F4F4F5;
+        margin-bottom: 20px;
+        border-radius: 8px;
+
+        span {
+            color: $secondary;
+            font-weight: 700;
+            font-size: 20px;
+        }
+    }
+
+}
+
+.register {
+    padding: 3rem 0;
+    .form {
+        @include breakpoint(laptop) {
+            width: 70%;
+            margin: auto;
+        } 
+
+        .header {
+            .social {
+                margin: 0 1rem;
+            }
+    
+            .with-email {
+                p {
+                    display: flex;
+                    flex-direction: row;
+                }
+                p:before, p:after{
+                    content: "";
+                    flex: 1 1;
+                    border-bottom: 1px solid #DFE0E2;
+                    margin: auto;
+                }
+                p:before {
+                    margin-right: 10px
+                }
+                p:after {
+                    margin-left: 10px
+                }
+            }
+        }
+
+        .btn-secondary {
+            padding: 1rem !important;
+        }
+    }
+    
+}
+
+.register-done {
+    .container {
+        .row {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 80vh;
+            @include breakpoint(laptop) {
+                width: 40%;
+                margin: auto;
+            } 
+        }
+    }
+}
+
+.personal-info {
+    padding: 3rem 0;
+
+    .image {
+        padding-right: 1rem;
+    }
+
+    .btn-submit {
+        min-width: 300px;
+        padding: 1rem !important;
+    }
+}
+
+.document-info {
+    padding: 3rem 0;
+
+    .button {
+        margin: 0 .5rem;
+        width: 100%;
+        padding: 1rem !important;
+    }
+}

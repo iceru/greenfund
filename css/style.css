@@ -1,5 +1,13 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap");
 /* BREAKPOINTS */
+.primary-color {
+  color: #5C9C52;
+}
+
+.secondary-color {
+  color: #F96900;
+}
+
 .button {
   padding: .6rem 2.5rem !important;
   background-color: #5C9C52;
@@ -7,6 +15,10 @@
   border-radius: 40px;
   border: 2px solid #5C9C52;
   display: inline-block;
+}
+
+.button.full {
+  width: 100%;
 }
 
 .button.btn-white {
@@ -33,24 +45,15 @@
   border: 2px solid #F96900;
 }
 
-.title {
-  margin-bottom: 4rem;
-  text-align: center;
-}
-
-@media (max-width: 37.5em) {
-  .title {
-    margin-bottom: 2rem;
-  }
-  .title h2 {
-    font-size: 22px;
-    font-weight: 700;
-  }
+.button.btn-hollow-primary {
+  background-color: transparent;
+  color: #5C9C52;
+  border: 2px solid #5C9C52;
 }
 
 .navbar {
-  background-color: #7EC173;
-  color: white;
+  color: #5C9C52;
+  background-color: white;
 }
 
 .navbar .container {
@@ -79,6 +82,17 @@
       -ms-flex-align: center;
           align-items: center;
   font-weight: 700;
+}
+
+.navbar .container .menu-lists ul a {
+  -webkit-transition: all .2s ease;
+  transition: all .2s ease;
+}
+
+.navbar .container .menu-lists ul a:hover, .navbar .container .menu-lists ul a:active, .navbar .container .menu-lists ul a:focus, .navbar .container .menu-lists ul a.active {
+  color: #F96900;
+  -webkit-transition: all .2s ease;
+  transition: all .2s ease;
 }
 
 .navbar .container .menu-lists ul li {
@@ -148,6 +162,37 @@
   }
   .navbar .container .hamburger {
     display: block;
+  }
+}
+
+.index .navbar {
+  background-color: #7EC173;
+  color: white;
+}
+
+.index .navbar .btn-hollow-primary {
+  color: white;
+  border-color: white;
+}
+
+.index .navbar .btn-primary {
+  background-color: white;
+  color: #5C9C52;
+  border-color: white;
+}
+
+.title {
+  margin-bottom: 4rem;
+  text-align: center;
+}
+
+@media (max-width: 37.5em) {
+  .title {
+    margin-bottom: 2rem;
+  }
+  .title h2 {
+    font-size: 22px;
+    font-weight: 700;
   }
 }
 
@@ -246,6 +291,46 @@
   .projects {
     padding: 2rem 0;
   }
+}
+
+.projects.page {
+  padding: 0;
+}
+
+.projects.page > .container {
+  padding: 5rem 0;
+}
+
+@media (min-width: 64em) {
+  .projects.page .header {
+    width: 70%;
+    margin: auto;
+  }
+}
+
+.projects.page .header .header-title {
+  font-weight: 700;
+  margin-bottom: 3rem;
+}
+
+.projects.page .header .search-projects {
+  position: relative;
+}
+
+.projects.page .header .search-projects input {
+  width: 100%;
+  padding: 1rem 1.5rem;
+  border-radius: 24px;
+  border: 1px solid #9E9EA9;
+  padding-right: 30px;
+}
+
+.projects.page .header .search-projects .search-icon {
+  position: absolute;
+  right: 30px;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
 }
 
 .projects .project {
@@ -419,13 +504,13 @@
 
 .team .item .team-name {
   color: #F96900;
-  font-size: 24px;
+  font-size: 22px;
   font-weight: 500;
   margin-bottom: .5rem;
 }
 
 .team .item p {
-  font-size: 20px;
+  font-size: 18px;
 }
 
 @media (max-width: 60em) {
@@ -583,6 +668,247 @@
         -ms-flex-pack: center !important;
             justify-content: center !important;
   }
+}
+
+.sidebar {
+  background: #5C9C52;
+  color: white;
+  padding: 3rem 1.5rem;
+  border-radius: 8px 0 0 8px;
+}
+
+.sidebar .sidebar-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.sidebar .sidebar-header .image {
+  margin-bottom: .75rem;
+}
+
+.sidebar .sidebar-header .image img {
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+}
+
+.sidebar .sidebar-header h5 {
+  margin-bottom: 4px;
+}
+
+.sidebar .sidebar-header p {
+  font-weight: 500;
+}
+
+.sidebar .sidebar-menu ul {
+  padding: 0;
+  margin: 0;
+}
+
+.sidebar .sidebar-menu ul li {
+  padding: 1rem;
+  margin-bottom: 1rem;
+  -webkit-transition: all .2s ease;
+  transition: all .2s ease;
+  border-radius: 1.5rem;
+}
+
+.sidebar .sidebar-menu ul li img {
+  margin-right: 1rem;
+  width: 24px;
+  height: auto;
+}
+
+.sidebar .sidebar-menu ul li:hover {
+  background-color: #DEFFD4;
+  color: #F96900;
+  -webkit-transition: all .2s ease;
+  transition: all .2s ease;
+}
+
+.sidebar .sidebar-menu ul .account {
+  margin-bottom: 4rem;
+}
+
+.about .title {
+  margin-bottom: 2rem;
+  color: #F96900;
+  text-align: left;
+}
+
+.about .header h1 {
+  font-size: 52px;
+  font-weight: 700;
+  padding: 2rem 0 3rem;
+}
+
+.about .header .images {
+  margin-bottom: 2rem;
+}
+
+.about .header .underline {
+  position: relative;
+}
+
+.about .header .underline:after {
+  content: ' ';
+  position: absolute;
+  width: 100%;
+  height: 1rem;
+  background: #5C9C52;
+  bottom: 6px;
+  left: 0;
+  z-index: -1;
+}
+
+.about .our-story {
+  padding: 3rem 0;
+  text-align: center;
+}
+
+.about .our-story .container > .row {
+  width: 40%;
+  margin: auto;
+}
+
+.about .team {
+  padding: 3rem 0;
+}
+
+.about .values {
+  padding: 3rem 0;
+}
+
+.values .container .item {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.values .container .item:not(:last-child) {
+  margin-bottom: 6rem;
+}
+
+.values .container .item .item-title {
+  color: #5C9C52;
+  font-weight: 500;
+  margin-bottom: 1rem;
+}
+
+.form-group .form-control, .form-group .form-select {
+  padding: 1rem;
+  font-size: 14px;
+  border-radius: 6px;
+}
+
+.form-group .form-label {
+  font-weight: 500;
+}
+
+.form-group .form-title {
+  padding: .5rem 1rem;
+  background: #F4F4F5;
+  margin-bottom: 20px;
+  border-radius: 8px;
+}
+
+.form-group .form-title span {
+  color: #F96900;
+  font-weight: 700;
+  font-size: 20px;
+}
+
+.register {
+  padding: 3rem 0;
+}
+
+@media (min-width: 64em) {
+  .register .form {
+    width: 70%;
+    margin: auto;
+  }
+}
+
+.register .form .header .social {
+  margin: 0 1rem;
+}
+
+.register .form .header .with-email p {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.register .form .header .with-email p:before, .register .form .header .with-email p:after {
+  content: "";
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1;
+          flex: 1 1;
+  border-bottom: 1px solid #DFE0E2;
+  margin: auto;
+}
+
+.register .form .header .with-email p:before {
+  margin-right: 10px;
+}
+
+.register .form .header .with-email p:after {
+  margin-left: 10px;
+}
+
+.register .form .btn-secondary {
+  padding: 1rem !important;
+}
+
+.register-done .container .row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 80vh;
+}
+
+@media (min-width: 64em) {
+  .register-done .container .row {
+    width: 40%;
+    margin: auto;
+  }
+}
+
+.personal-info {
+  padding: 3rem 0;
+}
+
+.personal-info .image {
+  padding-right: 1rem;
+}
+
+.personal-info .btn-submit {
+  min-width: 300px;
+  padding: 1rem !important;
+}
+
+.document-info {
+  padding: 3rem 0;
+}
+
+.document-info .button {
+  margin: 0 .5rem;
+  width: 100%;
+  padding: 1rem !important;
 }
 
 html, body {

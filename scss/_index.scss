@@ -6,6 +6,22 @@
     }
 }
 
+.index .navbar {
+    background-color: $header;
+    color: white;
+
+    .btn-hollow-primary {
+        color: white;
+        border-color: white;
+    }
+
+    .btn-primary {
+        background-color: white;
+        color: $primary;
+        border-color: white;
+    }
+}
+
 .title {
     margin-bottom: 4rem;
     text-align: center;
@@ -15,104 +31,6 @@
         h2 {
             font-size: 22px;
             font-weight: 700;
-        }
-    }
-}
-
-.navbar {
-    background-color: $header;
-    color: white;
-
-    .container {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-
-        .navbar-brand {
-            padding: 1rem 0;
-        }
-
-        .menu-lists {
-            ul {
-                margin: 0;
-                padding: 0;
-                display: flex;
-                align-items: center;
-                font-weight: 700;
-
-                li {
-                    padding: 1rem;
-                }
-
-                .button {
-                    margin-left: 1rem;
-                }
-            }
-        }
-
-        .hamburger {
-            display: none;
-        }
-
-        .offcanvas {
-            width: 330px;
-            color: $primary;
-            padding: 0 1rem;
-            padding-top: 2rem;
-
-            .btn-close {
-                color: white !important;
-            }
-
-            ul {
-                padding: 2rem 0;
-                font-weight: 700;
-                font-size: 18px;
-                margin-top: 2rem;
-
-                li {
-                    padding-bottom: 1.5rem;
-                }
-
-                .button {
-                    margin-bottom: 1.5rem;
-                }
-
-                .btn-hollow {
-                    color: $primary;
-                    border: 2px solid $primary;
-                }
-
-                .btn-white {
-                    color: white;
-                    background-color: $primary;
-                    border-color: $primary;
-                }
-            }
-        }
-    }
-
-    
-
-    @include breakpoint(untilTablet) {
-        background-color: white;
-
-        .container {
-            padding: 0 1rem !important;
-            .menu-lists {
-                display: none;
-            }
-    
-            .navbar-brand {
-                padding: .5rem 0;
-                img {
-                    max-width: 150px;
-                }
-            }
-    
-            .hamburger {
-                display: block;
-            }
         }
     }
 }
@@ -208,6 +126,41 @@
 
 .projects {
     @include initialPadding();
+
+    &.page {
+        padding: 0;
+        > .container {
+            padding: 5rem 0;
+        }
+        .header {
+            @include breakpoint(laptop) {
+                width: 70%;
+                margin: auto;
+            }
+            .header-title {
+                font-weight: 700;
+                margin-bottom: 3rem;
+            }
+
+            .search-projects {
+                position: relative;
+                input {
+                    width: 100%;
+                    padding: 1rem 1.5rem;
+                    border-radius: 24px;
+                    border: 1px solid #9E9EA9;
+                    padding-right: 30px;
+                }
+
+                .search-icon {
+                    position: absolute;
+                    right: 30px;
+                    top: 50%;
+                    transform: translateY(-50%);
+                }
+            }
+        }
+    }
 
     .project {
         box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.16);
@@ -359,13 +312,13 @@
         
         .team-name {
             color: $secondary;
-            font-size: 24px;
+            font-size: 22px;
             font-weight: 500;
             margin-bottom: .5rem;
         }
 
         p {
-            font-size: 20px;
+            font-size: 18px;
         }
 
         @include breakpoint(untilTablet) {
