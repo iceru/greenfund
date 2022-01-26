@@ -29,16 +29,36 @@
                 z-index: -1;
             }
         }
+
+        @include breakpoint(untilTablet){
+            h1 {
+                font-size: 34px;
+            }
+
+            .underline {
+                &:after {
+                    height: .75rem;
+                }
+            }
+
+            .images {
+                div {
+                    margin-bottom: 1rem;
+                }
+            }
+        }
     }
 
     .our-story {
         padding: 3rem 0;
         text-align: center;
         
-        .container {
-            > .row {
-                width: 40%;
-                margin: auto;
+        @include breakpoint(laptop) {
+            .container {
+                > .row {
+                    width: 40%;
+                    margin: auto;
+                }
             }
         }
     }
@@ -54,10 +74,23 @@
 
 .values {
     .container {
+        .content {
+            display: flex;
+
+            @include breakpoint(mobileonly) {
+                display: block !important;
+            }
+        }
+
         .item {
             align-items: center;
             &:not(:last-child) {
                 margin-bottom: 6rem;
+            }
+            @include breakpoint(mobileonly) {
+               img {
+                   margin-bottom: 1rem;
+               }
             }
 
             .item-title {

@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Greenfund</title>
+
+    <!-- CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Javascript -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div data-include="/components/navbar.html"></div>
+
+    <div class="penerbit">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-lg-3">
+                    <div data-include="/components/sidebar.html"></div>
+                </div>
+                <div class="col-12 col-lg-9">
+                    <div class="content">
+                        <div class="header-button">
+                            <a href="" class="button btn-secondary">
+                                + Dafterkan Penerbit
+                            </a>
+                        </div>
+
+                        <ul class="nav nav-tabs" id="myTab" role="tablist">
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link active" id="proses-tab" data-bs-toggle="tab"
+                                    data-bs-target="#proses" type="button" role="tab" aria-controls="proses"
+                                    aria-selected="true">Dalam Proses</button>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link" id="disetujui-tab" data-bs-toggle="tab" data-bs-target="#disetujui"
+                                    type="button" role="tab" aria-controls="disetujui"
+                                    aria-selected="false">Proyek Disetujui</button>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link" id="ditolak-tab" data-bs-toggle="tab" data-bs-target="#ditolak"
+                                    type="button" role="tab" aria-controls="ditolak"
+                                    aria-selected="false">Proyek Ditolak</button>
+                            </li>
+                        </ul>
+                        <div class="tab-content" id="myTabContent">
+                            <div class="tab-pane fade show active" id="proses" role="tabpanel" aria-labelledby="proses-tab">
+                                <div class="items">
+                                    <h5>8 Juni 2021</h5>
+        
+                                    <div class="item">
+                                        <div class="row">
+                                            <div class="col-12 col-lg-5 project-header">
+                                                <div class="d-flex">
+                                                    <div class="image me-3">
+                                                        <img src="/images/dashboard/project-1.png" alt="">
+                                                    </div>
+                                                    <div>
+                                                        <p class="fw-bold mb-2">PT Ayam Geprek Pedas</p>
+                                                        <p>Pemodalan</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-12 col-lg-3">
+                                                <div class="item-border">
+                                                    <div class="regular mb-2">Status</div>
+                                                    <div class="primary-color mb-3 fw-bold">Pengecekan</div>
+        
+                                                    <div class="regular mb-2">Waktu pengecekan</div>
+                                                    <div class="d-flex align-items-center">
+                                                        <div class="me-2">
+                                                            <img src="/images//dashboard/hourglass.png" alt="">
+                                                        </div>
+                                                        <div class="primary-color fw-bold">
+                                                            23:57:01
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-12 col-lg-4">
+                                                <div class="item-border">
+                                                    <div class="regular mb-2">Nominal</div>
+                                                    <div class="mb-3">Rp 10.000.000</div>
+        
+                                                    <div class="d-flex">
+                                                        <a class="button btn-danger" href="">Batalkan</a>
+                                                        <a class="button btn-hollow-black" href="">Ubah</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <div class="row">
+                                            <div class="col-12 col-lg-5 project-header">
+                                                <div class="d-flex">
+                                                    <div class="image me-3">
+                                                        <img src="/images/dashboard/project-1.png" alt="">
+                                                    </div>
+                                                    <div>
+                                                        <p class="fw-bold mb-2">PT Ayam Geprek Pedas</p>
+                                                        <p>Pemodalan</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-12 col-lg-3">
+                                                <div class="item-border">
+                                                    <div class="regular mb-2">Status</div>
+                                                    <div class="primary-color mb-3 fw-bold">Pengecekan</div>
+        
+                                                    <div class="regular mb-2">Waktu pengecekan</div>
+                                                    <div class="d-flex align-items-center">
+                                                        <div class="me-2">
+                                                            <img src="/images//dashboard/hourglass.png" alt="">
+                                                        </div>
+                                                        <div class="primary-color fw-bold">
+                                                            23:57:01
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-12 col-lg-4">
+                                                <div class="item-border">
+                                                    <div class="regular mb-2">Nominal</div>
+                                                    <div class="mb-3">Rp 10.000.000</div>
+        
+                                                    <div class="d-flex">
+                                                        <a class="button btn-danger" href="">Batalkan</a>
+                                                        <a class="button btn-hollow-black" href="">Ubah</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+        
+                                <div class="items">
+                                    <h5>4 Juni 2021</h5>
+        
+                                    <div class="item">
+                                        <div class="row">
+                                            <div class="col-12 col-lg-5 project-header">
+                                                <div class="d-flex">
+                                                    <div class="image me-3">
+                                                        <img src="/images/dashboard/project-1.png" alt="">
+                                                    </div>
+                                                    <div>
+                                                        <p class="fw-bold mb-2">PT Ayam Geprek Pedas</p>
+                                                        <p>Pemodalan</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-12 col-lg-3">
+                                                <div class="item-border">
+                                                    <div class="regular mb-2">Status</div>
+                                                    <div class="primary-color mb-3 fw-bold">Pengecekan</div>
+        
+                                                    <div class="regular mb-2">Waktu pengecekan</div>
+                                                    <div class="d-flex align-items-center">
+                                                        <div class="me-2">
+                                                            <img src="/images//dashboard/hourglass.png" alt="">
+                                                        </div>
+                                                        <div class="primary-color fw-bold">
+                                                            23:57:01
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-12 col-lg-4">
+                                                <div class="item-border">
+                                                    <div class="regular mb-2">Nominal</div>
+                                                    <div class="mb-3">Rp 10.000.000</div>
+        
+                                                    <div class="d-flex">
+                                                        <a class="button btn-danger" href="">Batalkan</a>
+                                                        <a class="button btn-hollow-black" href="">Ubah</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tab-pane fade" id="disetujui" role="tabpanel" aria-labelledby="disetujui-tab">
+                                <div class="items">
+                                    <h5>8 Juni 2021</h5>
+        
+                                    <div class="item">
+                                        <div class="row">
+                                            <div class="col-12 col-lg-5 project-header">
+                                                <div class="d-flex">
+                                                    <div class="image me-3">
+                                                        <img src="/images/dashboard/project-1.png" alt="">
+                                                    </div>
+                                                    <div>
+                                                        <p class="fw-bold mb-2">PT Ayam Geprek Pedas</p>
+                                                        <p>Pemodalan</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-12 col-lg-3">
+                                                <div class="item-border">
+                                                    <div class="regular mb-2">Status</div>
+                                                    <div class="success-color mb-3 fw-bold">Disetujui</div>
+                                                </div>
+                                            </div>
+                                            <div class="col-12 col-lg-4">
+                                                <div class="item-border">
+                                                    <div class="regular mb-2">Nominal</div>
+                                                    <div class="mb-3">Rp 10.000.000</div>
+        
+                                                    <div class="d-flex">
+                                                        <a class="button btn-hollow-black full" href="">Ubah</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <div class="row">
+                                            <div class="col-12 col-lg-5 project-header">
+                                                <div class="d-flex">
+                                                    <div class="image me-3">
+                                                        <img src="/images/dashboard/project-1.png" alt="">
+                                                    </div>
+                                                    <div>
+                                                        <p class="fw-bold mb-2">PT Ayam Geprek Pedas</p>
+                                                        <p>Pemodalan</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-12 col-lg-3">
+                                                <div class="item-border">
+                                                    <div class="regular mb-2">Status</div>
+                                                    <div class="success-color mb-3 fw-bold">Disetujui</div>
+                                                </div>
+                                            </div>
+                                            <div class="col-12 col-lg-4">
+                                                <div class="item-border">
+                                                    <div class="regular mb-2">Nominal</div>
+                                                    <div class="mb-3">Rp 10.000.000</div>
+        
+                                                    <div class="d-flex">
+                                                        <a class="button btn-hollow-black full" href="">Ubah</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tab-pane fade" id="ditolak" role="tabpanel" aria-labelledby="ditolak-tab">
+                                <div class="items">
+                                    <h5>8 Juni 2021</h5>
+        
+                                    <div class="item">
+                                        <div class="row">
+                                            <div class="col-12 col-lg-5 project-header">
+                                                <div class="d-flex">
+                                                    <div class="image me-3">
+                                                        <img src="/images/dashboard/project-1.png" alt="">
+                                                    </div>
+                                                    <div>
+                                                        <p class="fw-bold mb-2">PT Ayam Geprek Pedas</p>
+                                                        <p>Pemodalan</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-12 col-lg-3">
+                                                <div class="item-border">
+                                                    <div class="regular mb-2">Status</div>
+                                                    <div class="danger-color mb-3 fw-bold">Ditolak</div>
+                                                </div>
+                                            </div>
+                                            <div class="col-12 col-lg-4">
+                                                <div class="item-border">
+                                                    <div class="regular mb-2">Nominal</div>
+                                                    <div class="mb-3">Rp 10.000.000</div>
+        
+                                                    <div class="d-flex">
+                                                        <a class="button btn-hollow-black full" href="">Ubah</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <div class="row">
+                                            <div class="col-12 col-lg-5 project-header">
+                                                <div class="d-flex">
+                                                    <div class="image me-3">
+                                                        <img src="/images/dashboard/project-1.png" alt="">
+                                                    </div>
+                                                    <div>
+                                                        <p class="fw-bold mb-2">PT Ayam Geprek Pedas</p>
+                                                        <p>Pemodalan</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-12 col-lg-3">
+                                                <div class="item-border">
+                                                    <div class="regular mb-2">Status</div>
+                                                    <div class="danger-color mb-3 fw-bold">Ditolak</div>
+                                                </div>
+                                            </div>
+                                            <div class="col-12 col-lg-4">
+                                                <div class="item-border">
+                                                    <div class="regular mb-2">Nominal</div>
+                                                    <div class="mb-3">Rp 10.000.000</div>
+        
+                                                    <div class="d-flex">
+                                                        <a class="button btn-hollow-black full" href="">Ubah</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                       
+                    </div>
+
+                    <div class="content-blank" hidden>
+                        <div data-include="/components/dashboard-register.html"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+<script>
+    $(document).ready(function () {
+        $("div[data-include]").each(function () {
+            $(this).load($(this).attr("data-include"));
+        });
+
+        $('.navbar .btn-primary').hide();
+    });
+
+</script>
+
+</html>

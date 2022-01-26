@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Nunito+Sans:wght@400;600;700&family=Open+Sans:wght@400;600;700&display=swap');
 
 @import 'variables';
 @import 'navbar';
@@ -42,4 +42,8 @@ h6 {
 
 .semibold {
     font-weight: 600;
+}
+
+.regular {
+    font-size: 14px;
 }
