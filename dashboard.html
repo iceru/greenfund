@@ -27,57 +27,140 @@
         <div class="container">
             <div class="row">
                 <div class="col-12 col-lg-3">
-                    <div class="sidebar">
-                        <div class="sidebar-header">
-                            <div class="image"><img src="/images/sidebar/userImage.png" alt=""></div>
-                            <h5>Eren Yeager</h4>
-                            <p>erenyeager@gmail.com</p>
+                    <div data-include="/components/sidebar.html"></div>
+                </div>
+                <div class="col-12 col-lg-9">
+                    <div class="content">
+                        <div class="row content-header">
+                            <div class="col-12 col-lg-6">
+                                <div class="card-item">
+                                    <p class="grey-color">Saldo Anda</p>
+                                    <h4>Rp <b>500.000</b></h4>
+                                    <div class="d-flex">
+                                        <a class="button btn-secondary" href="#">Top Up</a>
+                                        <a class="button btn-hollow-black" href="#">Tarik</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 col-lg-6">
+                                <div class="card-item">
+                                    <p class="grey-color">Nilai Investasi</p>
+                                    <h4>Rp <b>1.000.000</b></h4>
+                                    <p class="semibold">Total Aset: Rp 130.000.000</p>
+                                </div>
+                            </div>
                         </div>
-                        <div class="sidebar-menu">
-                            <ul>
-                                <a href="">
-                                    <li>
-                                        <img src="/images/sidebar/dashboard.png" alt="">
-                                        Dashboard
+
+                        <div class="row projects-dashboard">
+                            <h5>Proyek Berlangsung</h5>
+
+                            <div class="content-available">
+                                <div class="item">
+                                    <div class="row project-header">
+                                        <div class="col-12 col-lg-6">
+                                            <div class="d-flex">
+                                                <div>
+                                                    <img src="/images/project-1.png" alt="">
+                                                </div>
+                                                <div>
+                                                    <div class="project-title">Baker Man Bintaro</div>
+                                                    <div class="semibold">PT Jaya Wijaya Sukoharjo</div>
+                                                    <div class="type">Perdagangan</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-12 col-lg-6">
+                                            <p class="grey-color">Total Pendanaan</p>
+                                            <div class="semibold">Rp 2.000.000.000</div>
+                                            <div class="progress">
+                                                <div class="progress-bar" role="progressbar" style="width: 75%;"
+                                                    aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                                                <div class="text">75%</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row project-footer align-items-center">
+                                        <div class="col-6 col-lg-3">
+                                            <div class="grey-color">Sisa waktu:</div>
+                                            <div class="semibold">24 hari lagi</div>
+                                        </div>
+                                        <div class="col-6 col-lg-3">
+                                            <div class="grey-color">Periode dividen:</div>
+                                            <div class="semibold">6 bulan</div>
+                                        </div>
+                                        <div class="col-12 col-lg-6">
+                                            <a class="button btn-secondary" href="">Danai Sekarang</a>
+                                        </div>
+                                    </div>
+                                </div>
+    
+                                <div class="item">
+                                    <div class="row project-header">
+                                        <div class="col-12 col-lg-6">
+                                            <div class="d-flex">
+                                                <div>
+                                                    <img src="/images/project-1.png" alt="">
+                                                </div>
+                                                <div>
+                                                    <div class="project-title">Baker Man Bintaro</div>
+                                                    <div class="semibold">PT Jaya Wijaya Sukoharjo</div>
+                                                    <div class="type">Perdagangan</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-12 col-lg-6">
+                                            <p class="grey-color">Total Pendanaan</p>
+                                            <div class="semibold">Rp 2.000.000.000</div>
+                                            <div class="progress">
+                                                <div class="progress-bar" role="progressbar" style="width: 75%;"
+                                                    aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                                                <div class="text">75%</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row project-footer align-items-center">
+                                        <div class="col-6 col-lg-3">
+                                            <div class="grey-color">Sisa waktu:</div>
+                                            <div class="semibold">24 hari lagi</div>
+                                        </div>
+                                        <div class="col-6 col-lg-3">
+                                            <div class="grey-color">Periode dividen:</div>
+                                            <div class="semibold">6 bulan</div>
+                                        </div>
+                                        <div class="col-12 col-lg-6">
+                                            <a class="button btn-secondary" href="">Danai Sekarang</a>
+                                        </div>
+                                    </div>
+                                </div>
+    
+                                <nav aria-label="Page navigation">
+                                  <ul class="pagination justify-content-center">
+                                    <li class="page-item disabled">
+                                      <a class="page-link" href="#" aria-label="Previous">
+                                        <span aria-hidden="true">&laquo;</span>
+                                        <span class="visually-hidden">Previous</span>
+                                      </a>
                                     </li>
-                                </a>
-                                <a href="">
-                                    <li>
-                                        <img src="/images/sidebar/business.png" alt="">
-                                        Pemodal
+                                    <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                                    <li class="page-item"><a class="page-link" href="#">2</a></li>
+                                    <li class="page-item">
+                                      <a class="page-link" href="#" aria-label="Next">
+                                        <span aria-hidden="true">&raquo;</span>
+                                        <span class="visually-hidden">Next</span>
+                                      </a>
                                     </li>
-                                </a>
-                                <a href="">
-                                    <li>
-                                        <img src="/images/sidebar/briefcase.png" alt="">
-                                        Penerbit
-                                    </li>
-                                </a>
-                                <a href="">
-                                    <li>
-                                        <img src="/images/sidebar/transaksi.png" alt="">
-                                        Transaksi
-                                    </li>
-                                </a>
-                                <a href="">
-                                    <li class="account">
-                                        <img src="/images/sidebar/user.png" alt="">
-                                        Akun
-                                    </li>
-                                </a>
-                                <a href="">
-                                    <li>
-                                        <img src="/images/sidebar/headphones.png" alt="">
-                                        Support Center
-                                    </li>
-                                </a>
-                                <a href="">
-                                    <li>
-                                        <img src="/images/sidebar/logout.png" alt="">
-                                        Keluar
-                                    </li>
-                                </a>
-                            </ul>
+                                  </ul>
+                                </nav>
+                            </div>
+
+                            <!-- Display for No Projects State -->
+                            <div class="content-not-available text-center" hidden>
+                                <img src="/images/dashboard/no-projects.png" class="mb-3" alt="">
+                                <h5 class="grey-color">
+                                    Maaf saat ini tidak ada proyek tersedia
+                                </h5>
+                            </div>
+
                         </div>
                     </div>
                 </div>
@@ -91,6 +174,12 @@
         $("div[data-include]").each(function () {
             $(this).load($(this).attr("data-include"));
         });
+        
+        if(window.location.pathname == '/dashboard.html') {
+            $('.nav-dashboard').addClass('active');
+        }
+
+        console.log(window.location.pathname)
     });
 
 </script>

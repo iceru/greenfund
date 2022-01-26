@@ -29,39 +29,65 @@
                     <img src="/images/analytics.png" class="w-100" alt="">
                 </div>
                 <div class="col-12 col-lg-6">
-                    <form action="">
+                    <div>
                         <div class="form-group mb-4">
                             <div class="form-title"><span>Upload File</span></div>
-    
-                            <div class="row">
-                                <div class="col-12 col-lg-12">
-                                    <div class="mb-3">
-                                        <label for="" class="form-label">Nomor KTP</label>
-                                        <input type="text" class="form-control" name="ktp" id=""
-                                            placeholder="e.g. 3271057292839">
-                                    </div>
-                                </div>
-                                <div class="col-12 col-lg-12">
-                                    <div class="mb-3">
-                                        <label for="" class="form-label">Nomor NPWP</label>
-                                        <input type="text" class="form-control" name="npwp" id=""
-                                            placeholder="e.g. 52637162842">
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="form-group mb-5">
-                            <div class="form-title"><span>Batasan Pemodal</span></div>
-    
+
                             <div class="row">
                                 <div class="col-12">
-                                    <div class="mb-3">
-                                        <label for="" class="form-label">Batasan Pemodal</label>
-                                        <select class="form-select" name="" id="">
-                                            <option disabled selected>Pilih batasan pemodal</option>
-                                            <option></option>
-                                            <option></option>
-                                        </select>
+                                    <div class="mb-4">
+                                        <label for="" class="form-label">Foto KTP</label>
+                                        <div class="mb-2">
+                                            <label class="btn btn-primary btn-upload">
+                                                <i class="fa fa-image"></i> Upload File<input type="file"
+                                                    style="display: none;" name="image">
+                                            </label>
+                                        </div>
+                                        <small small id="fileHelpId" class="form-text text-muted">*Foto harus jelas dan
+                                            terang dalam format jpeg, jpg, png (maksimum 10 MB)</small>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="mb-4">
+                                        <label for="" class="form-label">Foto NPWP</label>
+                                        <div class="mb-2">
+                                            <label class="btn btn-primary btn-upload">
+                                                <i class="fa fa-image"></i> Upload File<input type="file"
+                                                    style="display: none;" name="image">
+                                            </label>
+                                        </div>
+                                        <small id="fileHelpId" class="form-text text-muted">*Foto harus jelas dan terang
+                                            dalam format jpeg, jpg, png (maksimum 10 MB)</small>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="mb-4">
+                                        <label for="" class="form-label">Foto Tanda Tangan</label>
+                                        <div class="mb-2">
+                                            <label class="btn btn-primary btn-upload">
+                                                <i class="fa fa-image"></i> Upload File<input type="file"
+                                                    style="display: none;" name="image">
+                                            </label>
+                                        </div>
+                                        <small id="fileHelpId" class="form-text text-muted">*Foto harus jelas dan terang
+                                            dalam format jpeg, jpg, png (maksimum 10 MB)</small>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="mb-4">
+                                        <label for="" class="form-label">Foto Selfie</label>
+                                        <div class="mb-2">
+                                            <label class="btn btn-primary btn-upload">
+                                                <i class="fa fa-image"></i> Upload File<input type="file"
+                                                    style="display: none;" name="image">
+                                            </label>
+                                        </div>
+                                        <small id="fileHelpId" class="form-text text-muted">
+                                            * Mohon untuk mengambil foto selfie <br>
+                                            * Mohon untuk Allow/Izinkan penggunaan kamera pada perangkat Anda <br>
+                                            * Pastikan Anda menggunakan browser Mozilla Firefox, Google Chrome, Safari
+                                            atau Microsoft Edge versi terbaru <br>
+                                        </small>
                                     </div>
                                 </div>
                             </div>
@@ -69,14 +95,52 @@
 
                         <div class="d-flex justify-content-center">
                             <button class="button btn-hollow-secondary btn-submit">Kembali</button>
-                            <button type="submit" class="button btn-secondary btn-submit">Submit</button>
-
+                            <button class="button btn-secondary" data-bs-toggle="modal"
+                                data-bs-target="#modelId">Submit</button>
                         </div>
 
-                    </form>
+                    </div>
                 </div>
             </div>
         </div>
+        <!-- Modal -->
+        <div class="modal fade" id="modelId" tabindex="-1" role="dialog" aria-labelledby="modelTitleId"
+            aria-hidden="true">
+            <div class="modal-dialog modal-lg" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">Syarat & Ketentuan</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Eu consequat ipsum, quis ipsum quam
+                        pellentesque morbi sollicitudin velit. Dignissim nam dictum senectus dictum id sollicitudin
+                        malesuada in arcu. Elit dignissim ipsum bibendum orci, faucibus. Nisi, laoreet aliquam dignissim
+                        sed volutpat tortor sit. Ut sapien id id netus commodo euismod viverra semper iaculis. Leo in
+                        malesuada nibh nullam. Morbi et gravida arcu vestibulum magnis pretium a. Id porttitor tristique
+                        auctor proin pharetra at. Justo, et id odio quis tortor. Tristique sagittis, quis fames augue.
+                        Ultricies imperdiet auctor viverra rutrum lobortis volutpat posuere risus. <br>
+                        Malesuada nulla lectus eget erat erat potenti elementum eu. Enim sed ut pellentesque dolor
+                        faucibus. Non proin erat neque, convallis morbi accumsan tellus. Egestas sit viverra vestibulum
+                        eget enim dictumst. Faucibus mi sem gravida varius facilisis quam suspendisse et ac. Egestas
+                        placerat nisl tortor, tristique nibh quis cursus quam feugiat. <br>
+                        Congue risus imperdiet vestibulum vel ut. Nulla netus nullam elit tortor porttitor magna. Elit
+                        sapien, magna nisl netus orci, libero, vel. A, scelerisque quam in quis eleifend egestas. Est,
+                        ipsum feugiat purus integer eu, purus rhoncus aliquet. Venenatis vestibulum lectus aliquet sed.
+                        Nisi neque, tortor egestas malesuada vitae pharetra, mauris sit. <br>
+                        Egestas id elementum tempor facilisi quam. Faucibus dapibus venenatis, facilisi tristique quis
+                        massa. Diam habitant semper scelerisque tortor, tincidunt arcu aliquam justo, imperdiet.
+                        Facilisis et metus, quam in id sodales. Velit ridiculus sit venenatis mi nulla ac a sit eu.
+                        Pellentesque urna, turpis malesuada molestie et eget maecenas libero. Quis risus ac a sit sed
+                        vulputate rhoncus etiam. <br>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="button btn-secondary">Lanjutkan</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
     </div>
 </body>
 

@@ -36,6 +36,8 @@
                 margin-bottom: 1rem;
                 transition: all .2s ease;
                 border-radius: 1.5rem;
+                display: flex;
+                align-items: center;
 
                 img {
                     margin-right: 1rem;
@@ -43,10 +45,14 @@
                     height: auto;
                 }
 
-                &:hover {
+                &:hover, &.active {
                     background-color: #DEFFD4;
-                    color: #F96900;
+                    color: $secondary;
                     transition: all .2s ease;
+
+                    img {
+                        color: $secondary;
+                    }
                 }
             }
 

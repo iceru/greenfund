@@ -2,6 +2,7 @@ $primary: #5C9C52;
 $secondary: #F96900;
 $grey: #9E9EA9;
 $header: #7EC173;
+$black: #0A100D;
 
 /* BREAKPOINTS */
 @mixin breakpoint($point) {
@@ -39,6 +40,10 @@ $header: #7EC173;
 
 .secondary-color {
   color: $secondary;
+}
+
+.grey-color {
+  color: $grey;
 }
 
 .button {
@@ -82,5 +87,11 @@ $header: #7EC173;
       background-color: transparent;
       color: $primary;
       border: 2px solid $primary;
-  }
+    }
+
+    &.btn-hollow-black {
+      background-color: transparent;
+      border: 1px solid #D4D5D8;
+      color: $black;
+    }
 }

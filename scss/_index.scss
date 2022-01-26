@@ -181,23 +181,6 @@
             p, h5 {
                 margin-bottom: .5rem;
             }
-
-            .progress {
-                margin-bottom: 1rem;
-                color: white;
-                position: relative;
-
-                .text {
-                    position: absolute;
-                    top: 50%;
-                    left: 50%;
-                    transform: translate(-50%, -50%);
-                }
-
-                .progress-bar {
-                    background-color: $primary;
-                }
-            }
         }
     }
 
@@ -488,5 +471,22 @@
                 justify-content: center !important;
             }
         }
+    }
+}
+
+.progress {
+    margin-bottom: 1rem;
+    color: white;
+    position: relative;
+
+    .text {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .progress-bar {
+        background-color: $primary;
     }
 }
