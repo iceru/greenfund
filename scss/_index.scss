@@ -10,15 +10,17 @@
     background-color: $header;
     color: white;
 
-    .btn-hollow-primary {
-        color: white;
-        border-color: white;
-    }
-
-    .btn-primary {
-        background-color: white;
-        color: $primary;
-        border-color: white;
+    .menu-lists {
+        .btn-hollow-primary {
+            color: white;
+            border-color: white;
+        }
+    
+        .btn-primary {
+            background-color: white;
+            color: $primary;
+            border-color: white;
+        }
     }
 }
 

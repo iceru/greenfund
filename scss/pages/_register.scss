@@ -1,3 +1,11 @@
+@mixin padded {
+    padding: 3rem 0;
+
+    @include breakpoint(untilTablet) {
+       padding: .5rem 0;
+    }
+}
+
 .form-group {
     .form-control, .form-select {
         padding: 1rem;
@@ -35,7 +43,7 @@
 }
 
 .register {
-    padding: 3rem 0;
+    @include padded;
     .form {
         @include breakpoint(laptop) {
             width: 70%;
@@ -120,6 +128,12 @@
 .register-progress {
     margin-bottom: 2rem;
     padding-left: 1rem;
+
+    @include breakpoint(untilTablet) {
+        box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.08);
+        border-radius: 4px;
+        padding: .75rem 1rem;
+    }
     .col-4 {
         padding: 0 !important;
         margin-left: -4px;
@@ -134,8 +148,39 @@
     .circle {
         width: 1rem;
         height: 1rem;
-        background-color: $primary;
+        background-color: #F4F4F5;
         border-radius: 50%;
+
+        .number {
+            display: none;
+        }
+
+        &.active {
+            background-color: $primary;
+        }
+
+        @include breakpoint(untilTablet) {
+            width: 2rem;
+            height: 2rem;
+
+            position: relative;
+
+            .number {
+                display: block;
+                color: #C9C9CF;
+                font-weight: 700;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+            }
+
+            &.active {
+                .number {
+                    color: white;
+                }
+            }
+        }
     }
 
     .line {
@@ -181,14 +226,19 @@
     }
 
     span {
+        display: none;
         font-size: 12px;
         color: $primary;
         font-weight: 700;
+
+        @include breakpoint(laptop) {
+            display: block;
+        }
     }
 }
 
 .personal-info {
-    padding: 3rem 0;
+    @include padded;
 
     .image {
         padding-right: 1rem;
@@ -201,7 +251,7 @@
 }
 
 .document-info {
-    padding: 3rem 0;
+    @include padded;
 
     .container {
         .button {

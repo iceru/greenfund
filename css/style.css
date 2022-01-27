@@ -28,6 +28,15 @@
   border: 2px solid #5C9C52;
   display: inline-block;
   text-align: center;
+  -webkit-transition: all .2s ease;
+  transition: all .2s ease;
+}
+
+.button:hover, .button:active {
+  background-color: #487b40;
+  border-color: #5C9C52;
+  -webkit-transition: all .2s ease;
+  transition: all .2s ease;
 }
 
 .button.full {
@@ -44,6 +53,10 @@
   background-color: #F96900;
   color: white;
   border: 2px solid #F96900;
+}
+
+.button.btn-secondary:hover, .button.btn-secondary:active {
+  background-color: #c65300;
 }
 
 .button.btn-hollow {
@@ -150,7 +163,7 @@
   padding: 1rem;
 }
 
-.navbar .container .menu-lists ul li.active {
+.navbar .container .menu-lists ul li.active, .navbar .container .menu-lists ul li:hover, .navbar .container .menu-lists ul li:focus, .navbar .container .menu-lists ul li:active {
   color: #F96900;
 }
 
@@ -182,6 +195,10 @@
 
 .navbar .container .offcanvas ul li {
   padding-bottom: 1.5rem;
+}
+
+.navbar .container .offcanvas ul li.active, .navbar .container .offcanvas ul li:hover, .navbar .container .offcanvas ul li:focus, .navbar .container .offcanvas ul li:active {
+  color: #F96900;
 }
 
 .navbar .container .offcanvas ul .button {
@@ -225,12 +242,12 @@
   color: white;
 }
 
-.index .navbar .btn-hollow-primary {
+.index .navbar .menu-lists .btn-hollow-primary {
   color: white;
   border-color: white;
 }
 
-.index .navbar .btn-primary {
+.index .navbar .menu-lists .btn-primary {
   background-color: white;
   color: #5C9C52;
   border-color: white;
@@ -969,6 +986,12 @@
   padding: 3rem 0;
 }
 
+@media (max-width: 60em) {
+  .register {
+    padding: .5rem 0;
+  }
+}
+
 @media (min-width: 64em) {
   .register .form {
     width: 70%;
@@ -1073,6 +1096,15 @@
   padding-left: 1rem;
 }
 
+@media (max-width: 60em) {
+  .register-progress {
+    -webkit-box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.08);
+            box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.08);
+    border-radius: 4px;
+    padding: .75rem 1rem;
+  }
+}
+
 .register-progress .col-4 {
   padding: 0 !important;
   margin-left: -4px;
@@ -1085,8 +1117,37 @@
 .register-progress .circle {
   width: 1rem;
   height: 1rem;
-  background-color: #5C9C52;
+  background-color: #F4F4F5;
   border-radius: 50%;
+}
+
+.register-progress .circle .number {
+  display: none;
+}
+
+.register-progress .circle.active {
+  background-color: #5C9C52;
+}
+
+@media (max-width: 60em) {
+  .register-progress .circle {
+    width: 2rem;
+    height: 2rem;
+    position: relative;
+  }
+  .register-progress .circle .number {
+    display: block;
+    color: #C9C9CF;
+    font-weight: 700;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+  }
+  .register-progress .circle.active .number {
+    color: white;
+  }
 }
 
 .register-progress .line {
@@ -1132,13 +1193,26 @@
 }
 
 .register-progress span {
+  display: none;
   font-size: 12px;
   color: #5C9C52;
   font-weight: 700;
 }
 
+@media (min-width: 64em) {
+  .register-progress span {
+    display: block;
+  }
+}
+
 .personal-info {
   padding: 3rem 0;
+}
+
+@media (max-width: 60em) {
+  .personal-info {
+    padding: .5rem 0;
+  }
 }
 
 .personal-info .image {
@@ -1152,6 +1226,12 @@
 
 .document-info {
   padding: 3rem 0;
+}
+
+@media (max-width: 60em) {
+  .document-info {
+    padding: .5rem 0;
+  }
 }
 
 .document-info .container .button {

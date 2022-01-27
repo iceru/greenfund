@@ -30,7 +30,7 @@
                 li {
                     padding: 1rem;
 
-                    &.active {
+                    &.active, &:hover, &:focus, &:active {
                         color: $secondary;
                     }
                 }
@@ -63,6 +63,10 @@
 
                 li {
                     padding-bottom: 1.5rem;
+
+                    &.active, &:hover, &:focus, &:active {
+                        color: $secondary;
+                    }
                 }
 
                 .button {
