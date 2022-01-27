@@ -87,7 +87,7 @@
             &:not(:last-child) {
                 margin-bottom: 6rem;
             }
-            @include breakpoint(mobileonly) {
+            @include breakpoint(untilTablet) {
                img {
                    margin-bottom: 1rem;
                }
