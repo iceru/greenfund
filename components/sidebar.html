@@ -1,4 +1,4 @@
-<div class="sidebar d-none d-lg-block">
+<div class="sidebar sidebar-desktop d-none d-lg-block">
     <div class="sidebar-header">
         <div class="image"><img src="/images/sidebar/userImage.png" alt=""></div>
         <h5>Eren Yeager</h4>
@@ -6,13 +6,13 @@
     </div>
     <div class="sidebar-menu">
         <ul>
-            <a href="">
+            <a href="/dashboard.html">
                 <li class="nav-dashboard">
                     <div><img src="/images/sidebar/dashboard.svg" alt=""></div>
                     Dashboard
                 </li>
             </a>
-            <a href="">
+            <a href="/dashboard-pemodal.html">
                 <li>
                     <div>
                         <img src="/images/sidebar/business.png" alt="">
@@ -62,4 +62,17 @@
             </a>
         </ul>
     </div>
+
+    <script>
+        $(function () {
+            var current = location.pathname;
+            $('.sidebar-desktop .sidebar-menu a').each(function () {
+                var $this = $(this);
+                // if the current path is like this link, make it active
+                if ($this.attr('href').indexOf(current) !== -1) {
+                    $this.children().addClass('active');
+                }
+            })
+        })
+    </script>
 </div>

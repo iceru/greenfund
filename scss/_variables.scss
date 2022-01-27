@@ -112,3 +112,34 @@ $success: #46C938;
       border: 1px solid $danger;
     }
 }
+
+.pagination {
+  border-radius: 0;
+
+  .page-item {
+    
+    .page-link {
+      border: none;
+      color: $black;
+      font-size: 1rem;
+      padding: .5rem;
+
+      &:hover, &:focus, &:active {
+        background-color: transparent;
+        box-shadow: none;
+      }
+    }
+    &.active, &:hover {
+      .page-link {
+        background-color: transparent;
+        border-bottom: 2px solid $primary;
+      }
+    }
+
+    &:last-child, &:first-child {
+      .page-link {
+        border-radius: 0;
+      }
+    }
+  }
+}

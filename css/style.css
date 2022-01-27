@@ -76,6 +76,32 @@
   border: 1px solid #FF3D3A;
 }
 
+.pagination {
+  border-radius: 0;
+}
+
+.pagination .page-item .page-link {
+  border: none;
+  color: #0A100D;
+  font-size: 1rem;
+  padding: .5rem;
+}
+
+.pagination .page-item .page-link:hover, .pagination .page-item .page-link:focus, .pagination .page-item .page-link:active {
+  background-color: transparent;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+.pagination .page-item.active .page-link, .pagination .page-item:hover .page-link {
+  background-color: transparent;
+  border-bottom: 2px solid #5C9C52;
+}
+
+.pagination .page-item:last-child .page-link, .pagination .page-item:first-child .page-link {
+  border-radius: 0;
+}
+
 .navbar {
   color: #5C9C52;
   background-color: white;
@@ -122,6 +148,10 @@
 
 .navbar .container .menu-lists ul li {
   padding: 1rem;
+}
+
+.navbar .container .menu-lists ul li.active {
+  color: #F96900;
 }
 
 .navbar .container .menu-lists ul .button {
@@ -755,6 +785,7 @@
   color: #F96900;
   -webkit-transition: all .2s ease;
   transition: all .2s ease;
+  font-weight: 700;
 }
 
 .sidebar .sidebar-menu ul li:hover img, .sidebar .sidebar-menu ul li.active img {
@@ -763,6 +794,44 @@
 
 .sidebar .sidebar-menu ul .account {
   margin-bottom: 4rem;
+}
+
+.sidebar-mobile {
+  position: fixed;
+  left: 0;
+  top: 0;
+  -webkit-transform: translateX(-100%);
+          transform: translateX(-100%);
+  opacity: 0;
+  -webkit-transition: all .2s ease;
+  transition: all .2s ease;
+  visibility: hidden;
+}
+
+.sidebar-mobile.active {
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+  opacity: 1;
+  visibility: visible;
+  -webkit-transition: all .2s ease;
+  transition: all .2s ease;
+}
+
+.sidebar-mobile .sidebar {
+  min-width: 300px;
+  height: 100vh;
+  border-radius: 0;
+  padding: 2rem 1rem;
+  background-color: white;
+  color: #0A100D;
+  -webkit-box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.1);
+          box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.1);
+  position: relative;
+  overflow-y: auto;
+}
+
+.sidebar-mobile .sidebar .sidebar-menu {
+  overflow-y: auto;
 }
 
 .about .title {
@@ -1006,6 +1075,7 @@
 
 .register-progress .col-4 {
   padding: 0 !important;
+  margin-left: -4px;
 }
 
 .register-progress .col-4:first-child .circle-wrapper {
@@ -1126,7 +1196,7 @@
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  height: 80vh;
+  height: 100vh;
 }
 
 .content-blank .btn-secondary {

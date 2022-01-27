@@ -29,6 +29,10 @@
 
                 li {
                     padding: 1rem;
+
+                    &.active {
+                        color: $secondary;
+                    }
                 }
 
                 .button {
