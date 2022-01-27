@@ -1301,6 +1301,7 @@
       -ms-flex-pack: center;
           justify-content: center;
   height: 100vh;
+  text-align: center;
 }
 
 .content-blank .btn-secondary {
