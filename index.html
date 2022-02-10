@@ -21,7 +21,105 @@
 </head>
 
 <body class="index">
-    <div data-include="components/navbar.html"></div>
+    <nav class="navbar">
+        <div class="container">
+            <a class="navbar-brand" href="/index.html">
+                <img src="images/logo.png" alt="Greenfund">
+            </a>
+    
+            <div class="menu-lists">
+                <ul>
+                    <a href="/projects.html">
+                        <li>
+                            List Proyek
+                        </li>
+                    </a>
+    
+                    <a href="/about.html">
+                        <li>
+                            Tentang Kami
+                        </li>
+                    </a>
+                    <a href="">
+                        <li>
+                            FAQ
+                        </li>
+                    </a>
+                    <a href="/dashboard.html">
+                        <li class="button btn-hollow-primary">
+                            Masuk
+                        </li>
+                    </a>
+                    <a href="/register.html">
+                        <li class="button btn-primary">
+                            Daftar
+                        </li>
+                    </a>
+                </ul>
+            </div>
+    
+            <a class="hamburger" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button"
+                aria-controls="offcanvasExample">
+                <img src="images/icon-hamburger.png" alt="Navigations">
+            </a>
+    
+            <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample"
+                aria-labelledby="offcanvasExampleLabel">
+                <div class="offcanvas-header">
+                    <h5 class="offcanvas-title" id="offcanvasExampleLabel"></h5>
+                    <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"
+                        aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body">
+    
+                    <a class="navbar-brand" href="/index.html">
+                        <img src="images/logo.png" alt="Greenfund">
+                    </a>
+                    <ul>
+                        <a href="/projects.html">
+                            <li>
+                                List Proyek
+                            </li>
+                        </a>
+    
+                        <a href="/about.html">
+                            <li>
+                                Tentang Kami
+                            </li>
+                        </a>
+                        <a href="">
+                            <li>
+                                FAQ
+                            </li>
+                        </a>
+                        <a href="/dashboard.html">
+                            <li class="button btn-hollow-primary">
+                                Masuk
+                            </li>
+                        </a>
+                        <a href="/register.html">
+                            <li class="button btn-primary">
+                                Daftar
+                            </li>
+                        </a>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    
+        <script>
+            $(function () {
+                var current = location.pathname;
+                $('.menu-lists a').each(function () {
+                    var $this = $(this);
+                    // if the current path is like this link, make it active
+                    if ($this.attr('href').indexOf(current) !== -1) {
+                        $this.children().addClass('active');
+                    }
+                })
+            })
+        </script>
+    </nav>
 
     <div class="hero">
         <div class="container">
@@ -359,16 +457,151 @@
         </div>
     </div>
 
-    <div data-include="components/footer.html"></div>
+    <div class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 footer-logo">
+                    <img src="images/logo.png" alt="">
+                </div>
+            </div>
+    
+            <div class="footer-items row">
+                <div class="col-12 col-md-6 col-lg-3 footer-item">
+                    <h5 class="mb-3">Kantor Kami</h5>
+                    <p>PT. Global Kreasi Dana <br>
+                        NI HANYA UNTUK DEMO Fontana Tower 38th floor, BF.38.D-2 The Mansion, Jl. Trembesi, Pademangan
+                        Timur Jakarta, Indonesia </p>
+                </div>
+    
+                <div class="col-12 col-md-6 col-lg-3 footer-item">
+                    <h5 class="mb-3">Hubungi Kami</h5>
+                    <div class="d-flex align-items-center mb-2">
+                        <div class="me-2">
+                            <img src="images//icon-phone.png" alt="">
+                        </div>
+                        <p>021-2251-3339</p>
+                    </div>
+                    <div class="d-flex align-items-center">
+                        <div class="me-2">
+                            <img src="images/icon-envelope.png" alt="">
+                        </div>
+                        <p>021-2251-3339</p>
+                    </div>
+                </div>
+    
+                <div class="col-12 col-md-6 col-lg-3 footer-item">
+                    <h5 class="mb-3">Ikuti Kami</h5>
+                    <div class="d-flex">
+                        <div class="me-4">
+                            <img src="images/icon-facebook.png" alt="Facebook">
+                        </div>
+                        <div class="me-4">
+                            <img src="images/icon-twitter.png" alt="Twitter">
+                        </div>
+                        <div class="me-4">
+                            <img src="images/icon-instagram.png" alt="Instagram">
+                        </div>
+                        <div class="me-4">
+                            <img src="images/icon-youtube.png" alt="Youtube">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-3 footer-item">
+                    <h5 class="mb-3">Download Greenfund</h5>
+                    <div class="mb-3">
+                        <img src="images/appstore.png" alt="">
+                    </div>
+                    <div>
+                        <img src="images/googleplay.png" alt="">
+                    </div>
+                </div>
+            </div>
+    
+    
+    
+            <div class="row">
+                <div class="col-12 footer-risk">
+                    <h5>Risiko</h5>
+    
+                    <p>Risiko
+    
+                        Jangan melakukan investasi apa pun tanpa sepenuhnya memahami skenario terburuk dari investasi
+                        itu. <br>
+                        Greenfund adalah penyelenggara layanan urun dana melalui penawaran saham berbasis teknologi
+                        informasi sesuai POJK No. 57 / POJKJ.04/2020 <br> <br>
+    
+                        Semua investasi, termasuk urun dana, bersifat spekulatif dan melibatkan risiko kerugian yang
+                        substansial. Kami mendorong pemodal untuk berinvestasi dengan hati-hati. Kami juga mendorong
+                        pemodal untuk mendapatkan saran pribadi dari penasihat investasi profesional Anda dan melakukan
+                        penyelidikan independen sebelum bertindak berdasarkan informasi yang kami terbitkan. <br> <br>
+    
+                        Sebagian besar informasi kami berasal langsung dari informasi yang diterbitkan oleh perusahaan
+                        atau diserahkan ke lembaga pemerintah yang kami yakini dapat diandalkan, tetapi tanpa verifikasi
+                        independen kami. <br> <br>
+    
+                        Karenanya, kami tidak dapat meyakinkan Anda bahwa informasi tersebut akurat atau lengkap. Kami
+                        tidak dengan cara apa pun menjamin atau menjamin keberhasilan tindakan apa pun yang Anda lakukan
+                        dengan mengandalkan pernyataan atau rekomendasi kami. <br> <br>
+    
+                        Kinerja masa lalu tidak selalu menunjukkan hasil di masa mendatang. Semua investasi membawa
+                        risiko dan semua keputusan investasi individu tetap menjadi tanggung jawab individu tersebut.
+                        Tidak ada jaminan bahwa sistem, indikator, atau sinyal akan menghasilkan keuntungan atau bahwa
+                        mereka tidak akan menghasilkan kerugian. Semua pemodal disarankan untuk sepenuhnya memahami
+                        semua risiko yang terkait dengan segala jenis investasi yang mereka pilih untuk lakukan. <br>
+                        <br>
+    
+                        Kinerja hipotetis atau disimulasikan tidak menunjukkan hasil di masa mendatang. Kecuali secara
+                        khusus disebutkan sebaliknya, semua contoh pengembalian yang disediakan di situs web dan
+                        publikasi kami didasarkan pada investasi hipotetis atau disimulasikan. Kami tidak membuat
+                        pernyataan atau jaminan bahwa pemodal mana pun akan, atau kemungkinan besar, mencapai laba yang
+                        sama dengan yang ditunjukkan, karena kinerja hipotetis atau disimulasikan tidak selalu
+                        menunjukkan hasil di masa depan. <br> <br>
+                    </p>
+                    <h5>Macam macam Risiko</h5>
+                    <p>
+                        Meskipun saham secara historis berkinerja baik dalam jangka panjang, tidak ada jaminan Anda akan
+                        menghasilkan uang dari saham pada titik waktu tertentu. Meskipun sejumlah hal dapat membantu
+                        Anda menilai suatu saham, tidak ada yang dapat memprediksi dengan tepat bagaimana kinerja suatu
+                        saham di masa depan. Tidak ada jaminan harga akan naik atau perusahaan akan membayar dividen.
+                        Atau bahwa sebuah perusahaan akan bertahan dalam bisnisnya. Risiko adalah terjadinya kerugian
+                        terhadap investasi ekuitas atau hutang yang dilakukan oleh Pemodal. <br> <br>
+    
+                        Dalam setiap kegiatan investasi, Pemodal selalu memiliki potensi kehilangan seluruh dananya.
+                        Untuk menghindarinya, Anda dapat mempelajari terlebih dahulu risiko-risiko berikut ini untuk
+                        kemudian menentukan langkah yang tepat dalam melakukan investasi.<br> <br>
+    
+                        Beberapa risiko yang dapat terjadi saat Anda berinvestasi melalui SCF ,tetapi tidak terbatas
+                        pada yang berikut ini: <br> <br>
+    
+                        Salah satu risiko investasi yang paling jelas adalah bahwa ekonomi bisa memburuk setiap saat.
+                        Menyusul kehancuran pasar pada tahun 2000 dan serangan teroris pada 11 September 2001, ekonomi
+                        mengalami masa suram, dan kombinasi faktor-faktor menyebabkan indeks pasar kehilangan persentase
+                        yang signifikan. Butuh waktu bertahun-tahun untuk kembali ke level yang mendekati angka sebelum
+                        11 September, hanya untuk mengalami penurunan lagi dalam krisis keuangan 2008. <br> <br>
+    
+                        Risiko tidak dapat menjual investasi Anda dengan harga yang wajar dan mengeluarkan uang Anda
+                        kapan pun Anda mau. Untuk menjual investasi, Anda mungkin perlu menerima harga yang lebih
+                        rendah. Dalam beberapa kasus, seperti investasi pasar yang dikecualikan, investasi tersebut
+                        mungkin tidak dapat dijual sama sekali.
+                    </p>
+                </div>
+    
+                <div class="col-12 copyright">
+                    <div class="row">
+                        <div class="col-12 col-md-6 order-1 order-md-0">
+                            Copyright © 2021 Greenfund. All rights reserved.
+                        </div>
+                        <div class="col-12 col-md-6 links order-0 order-md-1">
+                            <div class="d-flex justify-content-end">
+                                <a class="me-3" href="">Kebijakan Privasi</a>
+                                <a href="">Kebijakan Cookie</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
-
-<script>
-    $(document).ready(function () {
-        $("div[data-include]").each(function () {                
-            $(this).load($(this).attr("data-include"));
-        });
-    });
-
-</script>
 
 </html>

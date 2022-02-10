@@ -21,7 +21,105 @@
 </head>
 
 <body>
-    <div data-include="components/navbar.html"></div>
+    <nav class="navbar">
+        <div class="container">
+            <a class="navbar-brand" href="/index.html">
+                <img src="images/logo.png" alt="Greenfund">
+            </a>
+    
+            <div class="menu-lists">
+                <ul>
+                    <a href="/projects.html">
+                        <li>
+                            List Proyek
+                        </li>
+                    </a>
+    
+                    <a href="/about.html">
+                        <li>
+                            Tentang Kami
+                        </li>
+                    </a>
+                    <a href="">
+                        <li>
+                            FAQ
+                        </li>
+                    </a>
+                    <a href="/dashboard.html">
+                        <li class="button btn-hollow-primary">
+                            Masuk
+                        </li>
+                    </a>
+                    <a href="/register.html">
+                        <li class="button btn-primary">
+                            Daftar
+                        </li>
+                    </a>
+                </ul>
+            </div>
+    
+            <a class="hamburger" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button"
+                aria-controls="offcanvasExample">
+                <img src="images/icon-hamburger.png" alt="Navigations">
+            </a>
+    
+            <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample"
+                aria-labelledby="offcanvasExampleLabel">
+                <div class="offcanvas-header">
+                    <h5 class="offcanvas-title" id="offcanvasExampleLabel"></h5>
+                    <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"
+                        aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body">
+    
+                    <a class="navbar-brand" href="/index.html">
+                        <img src="images/logo.png" alt="Greenfund">
+                    </a>
+                    <ul>
+                        <a href="/projects.html">
+                            <li>
+                                List Proyek
+                            </li>
+                        </a>
+    
+                        <a href="/about.html">
+                            <li>
+                                Tentang Kami
+                            </li>
+                        </a>
+                        <a href="">
+                            <li>
+                                FAQ
+                            </li>
+                        </a>
+                        <a href="/dashboard.html">
+                            <li class="button btn-hollow-primary">
+                                Masuk
+                            </li>
+                        </a>
+                        <a href="/register.html">
+                            <li class="button btn-primary">
+                                Daftar
+                            </li>
+                        </a>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    
+        <script>
+            $(function () {
+                var current = location.pathname;
+                $('.menu-lists a').each(function () {
+                    var $this = $(this);
+                    // if the current path is like this link, make it active
+                    if ($this.attr('href').indexOf(current) !== -1) {
+                        $this.children().addClass('active');
+                    }
+                })
+            })
+        </script>
+    </nav>
     <div class="document-info">
         <div class="container">
             <div class="row">
@@ -118,13 +216,5 @@
     </div>
 </body>
 
-<script>
-    $(document).ready(function () {
-        $("div[data-include]").each(function () {
-            $(this).load($(this).attr("data-include"));
-        });
-    });
-
-</script>
 
 </html>

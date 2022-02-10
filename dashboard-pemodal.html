@@ -21,33 +21,287 @@
 </head>
 
 <body>
-    <div data-include="components/navbar-login.html"></div>
-
+    <nav class="navbar">
+        <div class="container">
+            <a class="hamburger sidebar-icon">
+                <img src="images/sidebar/menu.png" alt="Navigations">
+            </a>
+    
+            <a class="navbar-brand" href="/index.html">
+                <img src="images/logo.png" alt="Greenfund">
+            </a>
+    
+            <div class="menu-lists">
+                <ul>
+                    <a href="/dashboard.html">
+                        <li>
+                            Dashboard
+                        </li>
+                    </a>
+                    <a href="/projects.html">
+                        <li>
+                            List Proyek
+                        </li>
+                    </a>
+    
+                    <a href="/about.html">
+                        <li>
+                            Tentang Kami
+                        </li>
+                    </a>
+                    <a href="">
+                        <li>
+                            FAQ
+                        </li>
+                    </a>
+                </ul>
+            </div>
+    
+            <a class="hamburger" data-bs-toggle="offcanvas" href="#offCanvasMenu" role="button"
+                aria-controls="offCanvasMenu">
+                <img src="images/icon-hamburger.png" alt="Navigations">
+            </a>
+    
+            <div class="offcanvas offcanvas-end offcanvas-menu" tabindex="-1" id="offCanvasMenu"
+                aria-labelledby="offCanvasMenuLabel">
+                <div class="offcanvas-header">
+                    <h5 class="offcanvas-title" id="offCanvasMenuLabel"></h5>
+                    <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"
+                        aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body">
+    
+                    <a class="navbar-brand" href="/index.html">
+                        <img src="images/logo.png" alt="Greenfund">
+                    </a>
+                    <ul>
+                        <a href="/dashboard.html">
+                            <li>
+                                Dashboard
+                            </li>
+                        </a>
+                        <a href="/projects.html">
+                            <li>
+                                List Proyek
+                            </li>
+                        </a>
+    
+                        <a href="/about.html">
+                            <li>
+                                Tentang Kami
+                            </li>
+                        </a>
+                        <a href="">
+                            <li>
+                                FAQ
+                            </li>
+                        </a>
+                    </ul>
+                </div>
+            </div>
+    
+            <div class="sidebar-mobile">
+                <div class="sidebar">
+                    <div class="d-flex justify-content-end">
+                        <button type="button" class="btn-close text-end sidebar-close" data-bs-dismiss="offcanvas"
+                            aria-label="Close"></button>
+                    </div>
+                    <div class="sidebar-header">
+                        <div class="image"><img src="images/sidebar/userImage.png" alt=""></div>
+                        <h5>Eren Yeager</h4>
+                            <p>erenyeager@gmail.com</p>
+                    </div>
+                    <div class="sidebar-menu">
+                        <ul>
+                            <a href="/dashboard.html">
+                                <li class="nav-dashboard">
+                                    <div><img src="images/sidebar/dashboard.svg" alt=""></div>
+                                    Dashboard
+                                </li>
+                            </a>
+                            <a href="/dashboard-pemodal.html">
+                                <li>
+                                    <div>
+                                        <img src="images/sidebar/business.png" alt="">
+                                    </div>
+                                    Pemodal
+                                </li>
+                            </a>
+                            <a href="/dashboard-penerbit.html">
+                                <li>
+                                    <div>
+                                        <img src="images/sidebar/briefcase.png" alt="">
+                                    </div>
+                                    Penerbit
+                                </li>
+                            </a>
+                            <a href="">
+                                <li>
+                                    <div>
+                                        <img src="images/sidebar/transaksi.png" alt="">
+                                    </div>
+                                    Transaksi
+                                </li>
+                            </a>
+                            <a href="">
+                                <li class="account">
+                                    <div>
+                                        <img src="images/sidebar/user.png" alt="">
+                                    </div>
+                                    Akun
+                                </li>
+                            </a>
+                            <a href="">
+                                <li>
+                                    <div>
+                                        <img src="images/sidebar/headphones.png" alt="">
+                                    </div>
+                                    Support Center
+                                </li>
+                            </a>
+                            <a href="">
+                                <li>
+                                    <div>
+                                        <img src="images/sidebar/logout.png" alt="">
+                                    </div>
+                                    Keluar
+                                </li>
+                            </a>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+        <script>
+            $(function () {
+                var current = location.pathname;
+                $('.menu-lists a').each(function () {
+                    var $this = $(this);
+                    // if the current path is like this link, make it active
+                    if ($this.attr('href').indexOf(current) !== -1) {
+                        $this.children().addClass('active');
+                    }
+                })
+    
+                $('.sidebar-icon').click(function (e) {
+                    e.preventDefault();
+                    $('.sidebar-mobile').addClass('active');
+                });
+    
+                $('.sidebar-close').click(function (e) {
+                    e.preventDefault();
+                    $('.sidebar-mobile').removeClass('active');
+                });
+    
+                $('.sidebar-mobile .sidebar-menu a').each(function () {
+                    var $this = $(this);
+                    // if the current path is like this link, make it active
+                    if ($this.attr('href').indexOf(current) !== -1) {
+                        $this.children().addClass('active');
+                    }
+                })
+            })
+    
+    
+        </script>
+    </nav>
     <div class="penerbit">
         <div class="container">
             <div class="row">
                 <div class="col-12 col-lg-3">
-                    <div data-include="components/sidebar.html"></div>
+                    <div class="sidebar sidebar-desktop d-none d-lg-block">
+                        <div class="sidebar-header">
+                            <div class="image"><img src="images/sidebar/userImage.png" alt=""></div>
+                            <h5>Eren Yeager</h4>
+                                <p>erenyeager@gmail.com</p>
+                        </div>
+                        <div class="sidebar-menu">
+                            <ul>
+                                <a href="/dashboard.html">
+                                    <li class="nav-dashboard">
+                                        <div><img src="images/sidebar/dashboard.svg" alt=""></div>
+                                        Dashboard
+                                    </li>
+                                </a>
+                                <a href="/dashboard-pemodal.html">
+                                    <li>
+                                        <div>
+                                            <img src="images/sidebar/business.png" alt="">
+                                        </div>
+                                        Pemodal
+                                    </li>
+                                </a>
+                                <a href="/dashboard-penerbit.html">
+                                    <li>
+                                        <div>
+                                            <img src="images/sidebar/briefcase.png" alt="">
+                                        </div>
+                                        Penerbit
+                                    </li>
+                                </a>
+                                <a href="">
+                                    <li>
+                                        <div>
+                                            <img src="images/sidebar/transaksi.png" alt="">
+                                        </div>
+                                        Transaksi
+                                    </li>
+                                </a>
+                                <a href="">
+                                    <li class="account">
+                                        <div>
+                                            <img src="images/sidebar/user.png" alt="">
+                                        </div>
+                                        Akun
+                                    </li>
+                                </a>
+                                <a href="">
+                                    <li>
+                                        <div>
+                                            <img src="images/sidebar/headphones.png" alt="">
+                                        </div>
+                                        Support Center
+                                    </li>
+                                </a>
+                                <a href="">
+                                    <li>
+                                        <div>
+                                            <img src="images/sidebar/logout.png" alt="">
+                                        </div>
+                                        Keluar
+                                    </li>
+                                </a>
+                            </ul>
+                        </div>
+                    
+                        <script>
+                            $(function () {
+                                var current = location.pathname;
+                                $('.sidebar-desktop .sidebar-menu a').each(function () {
+                                    var $this = $(this);
+                                    // if the current path is like this link, make it active
+                                    if ($this.attr('href').indexOf(current) !== -1) {
+                                        $this.children().addClass('active');
+                                    }
+                                })
+                            })
+                        </script>
+                    </div>
                 </div>
                 <div class="col-12 col-lg-9">
 
-                    <div class="content-blank"data-include="components/dashboard-register.html"> 
+                    <div class="content-blank"> 
+                        <div class="mb-4">
+                            <img src="images/dashboard/register.png" alt="">
+                        </div>
+                        <h5 class="grey-color mb-4">Yuk lengkapi data diri kamu terlebih dahulu</h5>
+                        <a class="button btn-secondary" href="/register-personal.html">Mulai Sekarang</a>
                     </div>
                 </div>
             </div>
         </div>
     </div>
 </body>
-
-<script>
-    $(document).ready(function () {
-        $("div[data-include]").each(function () {
-            $(this).load($(this).attr("data-include"));
-        });
-
-        $('.navbar .btn-primary').hide();
-    });
-
-</script>
 
 </html>
